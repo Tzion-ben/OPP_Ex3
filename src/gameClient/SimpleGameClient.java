@@ -58,6 +58,7 @@ public class SimpleGameClient  {
 			for(int a = 0;a<rs;a++) {
 				game.addRobot(src_node+a);
 			}
+			System.out.println(game.getRobots());
 		}
 		catch (JSONException e) {e.printStackTrace();}
 		game.startGame();

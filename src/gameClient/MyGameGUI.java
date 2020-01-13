@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -32,30 +33,36 @@ public class MyGameGUI {
 		String g = game.getGraph();
 		DGraph gg = new DGraph();
 		gg.init(g);
-	//	String info = game.toString();
-//		JSONObject line;
-//		try {
-//			line = new JSONObject(info);
-//			JSONObject ttt = line.getJSONObject("GameServer");
-//			int rs = ttt.getInt("robots");
-//			System.out.println(info);
-//			System.out.println(g);
-//			// the list of fruits should be considered in your solution
-//			Iterator<String> f_iter = game.getFruits().iterator();
-//			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
-//			int src_node = 0;  // arbitrary node, you should start at one of the fruits
-//			for(int a = 0;a<rs;a++) {
-//				game.addRobot(src_node+a);
-//			}
-//		}
-//		catch (JSONException e) {e.printStackTrace();}
-//		game.startGame();
-//		// should be a Thread!!!
-//		while(game.isRunning()) {
-//			moveRobots(game, gg);
-//		}
-//		String results = game.toString();
-//		System.out.println("Game Over: "+results);
+		String info = game.toString();
+		//		JSONObject line;
+		//		try {
+		//			line = new JSONObject(info);
+		//			JSONObject ttt = line.getJSONObject("GameServer");
+		//			int rs = ttt.getInt("robots");
+		//			System.out.println(info);
+		//			System.out.println(g);
+		//			// the list of fruits should be considered in your solution
+		//Iterator<String> f_iter = game.getFruits().iterator();
+		List<String> fruits=this.game.getFruits();
+		Iterator<String> f_iter = fruits.iterator();
+		while(f_iter.hasNext()) {
+			fruit f1=new fruit(f_iter.next());
+		}
+
+		//			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
+		//			int src_node = 0;  // arbitrary node, you should start at one of the fruits
+		//			for(int a = 0;a<rs;a++) {
+		//				game.addRobot(src_node+a);
+		//			}
+		//		}
+		//		catch (JSONException e) {e.printStackTrace();}
+		//		game.startGame();
+		//		// should be a Thread!!!
+		//		while(game.isRunning()) {
+		//			moveRobots(game, gg);
+		//		}
+		//		String results = game.toString();
+		//		System.out.println("Game Over: "+results);
 	}
 
 
