@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,6 +14,8 @@ import Server.game_service;
 import oop_dataStructure.OOP_DGraph;
 import oop_dataStructure.oop_edge_data;
 import oop_dataStructure.oop_graph;
+import utils.StdDraw;
+
 /**
  * This class represents a simple example for using the GameServer API:
  * the main file performs the following tasks:
@@ -29,15 +33,16 @@ import oop_dataStructure.oop_graph;
  * @author boaz.benmoshe
  *
  */
-public class SimpleGameClient {
+public class SimpleGameClient  {
 	public static void main(String[] a) {
 		test1();}
 	public static void test1() {
-		int scenario_num = 2;
-		game_service game = Game_Server.getServer(scenario_num); // you have [0,23] games
+		game_service game = Game_Server.getServer(2); // you have [0,23] games
+		MyGameGUI gameScrean=new MyGameGUI();
 		String g = game.getGraph();
 		OOP_DGraph gg = new OOP_DGraph();
 		gg.init(g);
+		
 		String info = game.toString();
 		JSONObject line;
 		try {
