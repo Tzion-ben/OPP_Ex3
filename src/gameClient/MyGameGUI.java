@@ -1,5 +1,6 @@
 package gameClient;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dialog;
 import java.awt.FileDialog;
@@ -8,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -33,36 +35,29 @@ public class MyGameGUI {
 		String g = game.getGraph();
 		DGraph gg = new DGraph();
 		gg.init(g);
+		drawNodes(gg);
 		String info = game.toString();
-		//		JSONObject line;
-		//		try {
-		//			line = new JSONObject(info);
-		//			JSONObject ttt = line.getJSONObject("GameServer");
-		//			int rs = ttt.getInt("robots");
-		//			System.out.println(info);
-		//			System.out.println(g);
-		//			// the list of fruits should be considered in your solution
-		//Iterator<String> f_iter = game.getFruits().iterator();
 		List<String> fruits=this.game.getFruits();
 		Iterator<String> f_iter = fruits.iterator();
 		while(f_iter.hasNext()) {
 			fruit f1=new fruit(f_iter.next());
 		}
+		
 
-		//			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
-		//			int src_node = 0;  // arbitrary node, you should start at one of the fruits
-		//			for(int a = 0;a<rs;a++) {
-		//				game.addRobot(src_node+a);
-		//			}
-		//		}
-		//		catch (JSONException e) {e.printStackTrace();}
-		//		game.startGame();
-		//		// should be a Thread!!!
-		//		while(game.isRunning()) {
-		//			moveRobots(game, gg);
-		//		}
-		//		String results = game.toString();
-		//		System.out.println("Game Over: "+results);
+	}
+	public void drawNodes(DGraph gg) {
+		Collection<node_data> vert=gg.getV();
+		Iterator<node_data> vert_it=vert.iterator();
+		StdDraw.setPenColor(Color.red);
+		StdDraw.setPenRadius(0.005);
+		StdDraw.setXscale(-100, 100);
+		StdDraw.setYscale(-50, 50);
+		while(vert_it.hasNext()) {
+			node_data tempV=vert_it.next();
+			Point3D pp=new Point3D(tempV.getLocation());
+			
+			StdDraw.point(pp.x(), pp.y());
+		}
 	}
 
 
