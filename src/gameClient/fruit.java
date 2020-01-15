@@ -19,7 +19,7 @@ public class fruit {
 	}
 
 
-	//*************only getters because the parameters are fron json file****************
+	//*************only getters because the parameters are from json file****************
 	public double getValue() {
 		return this.value;
 	}
