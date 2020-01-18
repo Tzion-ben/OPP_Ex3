@@ -36,14 +36,13 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	/**
 	 * take the name of the picture of the earth to put at the canvas
 	 */
-	//	private void drayPicture (DGraph gg) {
-	//		String gameDitales=this.game.toString();
-	//		gameServerString gamePlayNow=new gameServerString(gameDitales);
-	//		String allPicData=gamePlayNow.getgraphId();
-	//		String [] picData =allPicData.split("/");
-	//		Range middleOfCanvas=setRangeScale(gg);
-	//		StdDraw.picture(middleOfCanvas.get_max(), middleOfCanvas.get_min(), picData[1]+".png");
-	//	}
+	private void drayPicture (DGraph gg) {
+		String gameDitales=this.game.toString();
+		gameServerString gamePlayNow=new gameServerString(gameDitales);
+		String picData=gamePlayNow.getgraphId();
+		Range middleOfCanvas=setRangeScale(gg);
+		StdDraw.picture(middleOfCanvas.get_max(), middleOfCanvas.get_min(), picData+".png");
+	}
 
 	/**
 	 * this method is take the string with the details of the specific graph and make from it 
@@ -114,7 +113,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			fruit f1=new fruit(ff_it.next());
 			Point3D pF1=new Point3D(f1.getlocation());
 			if(f1.getType()==-1) {
-				
+
 				StdDraw.setPenColor(Color.red);
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
 				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
@@ -125,7 +124,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
 						+ "apple.png", 0.0012, 0.0012);
 			}
-			
+
 		}
 	} 
 
@@ -159,35 +158,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
-	/**
-	 * 
-	 * @param game
-	 * @param gg
-	 */
-	//	private void moveRobots(game_service game, DGraph gg) {
-	//		List<String> log = game.move();
-	//		if(log!=null) {
-	//			long t = game.timeToEnd();
-	//			for(int i=0;i<log.size();i++) {
-	//				String robot_json = log.get(i);
-	//				try {
-	//					JSONObject line = new JSONObject(robot_json);
-	//					JSONObject ttt = line.getJSONObject("Robot");
-	//					int rid = ttt.getInt("id");
-	//					int src = ttt.getInt("src");
-	//					int dest = ttt.getInt("dest");
-	//
-	//					if(dest==-1) {	
-	//
-	//						game.chooseNextEdge(rid, dest);
-	//						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
-	//						System.out.println(ttt);
-	//					}
-	//				} 
-	//				catch (JSONException e) {e.printStackTrace();}
-	//			}
-	//		}
-	//	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -263,9 +233,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 				if(this.game.timeToEnd()/1000==0) {
 					JOptionPane.showMessageDialog(this, "GAME OVER");
+					StdDraw.
 					Thread.sleep(250);
 					rr=new robbot(robotoss.get(rrToMoveInt));
-					JOptionPane.showMessageDialog(this, "The csore of the robot is"+rr.getValue());
+					JOptionPane.showMessageDialog(this, "The score of the robot is"+rr.getValue());
 					this.game.stopGame();
 				}
 			}
