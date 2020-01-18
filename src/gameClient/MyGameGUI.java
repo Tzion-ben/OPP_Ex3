@@ -233,7 +233,7 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 
 	/**
 	 * the manually game manger , puts the first robots at the chosen vertices, and send
-	 * them to draw the robots
+	 * them to draw the robots and activate the manually Game
 	 */
 	private void manuallyGameManger(DGraph gg) {
 		drawFruit ();
@@ -255,38 +255,30 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	 * 
 	 */
 	private void manuallyGame() {
-		List<String> robotoss=this.game.getRobots();
-		Thread tt=new Thread(this);
-		while(this.game.isRunning()) {
+		try {
+			List<String> robotoss=this.game.getRobots();
+			Thread tt=new Thread(this);
+			while(this.game.isRunning()) {
 
-			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
-					+ " that you want to move to"); 
-			int nextVV=Integer.parseInt(chooseStart);
-			String rrToMove=JOptionPane.showInputDialog(this.game,"ctype your robot id"
-					+ " ? 1 ?2? and so on..."); 
-			int rrToMoveInt=Integer.parseInt(rrToMove)-1;
-
-			try {
+				String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
+						+ " that you want to move to"); 
+				int nextVV=Integer.parseInt(chooseStart);
+				String rrToMove=JOptionPane.showInputDialog(this.game,"ctype your robot id"
+						+ " ? 1 ?2? and so on..."); 
+				int rrToMoveInt=Integer.parseInt(rrToMove)-1;
 				robbot rr=new robbot(robotoss.get(rrToMoveInt));
-				int gg=rr.getId();
 				this.game.chooseNextEdge(rr.getId(), nextVV);
-				robbot rr11=new robbot(robotoss.get(rrToMoveInt));
 				tt.start();
-
-			}
-			//if the number of the robot id that the user enterd was wrong then it runs again
-			//recursively
-			catch (Exception e) {
-				JOptionPane.showMessageDialog( null, this, "ERROR, worng level input,"
-						+ "try again", rrToMoveInt);
-				e.printStackTrace();
-			}
-			try {
-				Thread.sleep(4000);} catch (InterruptedException e1) {e1.printStackTrace();}
+				System.out.println(this.game.timeToEnd()/1000);
+				if (this.game.timeToEnd()==0)
+					this.game.stopGame();
+			}		
 		}
+		catch (Exception e) {
+			e.getStackTrace();}
 	}
 
-	//********************************************Game chooser********************************************
+	//********************************************Game choosers********************************************
 
 	/**
 	 * this method is about to let the user decide if he want to play automatically or manually,have to write
@@ -304,8 +296,31 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		}
 		if(choose==1) 
 			manuallyGameManger(gg);
-		else if(choose==0)
-			automaticallyGame(gg);
+		//else if(choose==0)
+		//automaticallyGame(gg);
+	}
+
+	/**
+	 * this mathod is let to the user to choose the level of the game that he want
+	 * to play
+	 */
+	private void chooseLevel() {
+		int level=0;
+		String scenario_num="";
+		try {
+			scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
+			level=Integer.parseInt(scenario_num);
+			while(level>23||level<0) {
+				JOptionPane.showMessageDialog((Component) this.game, "ERROR, worng level input, please try again");
+				scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
+				level=Integer.parseInt(scenario_num);
+			}
+			this.game=Game_Server.getServer(level);
+			GraphInit();
+		}
+		catch (Exception e) {
+			JOptionPane.showMessageDialog( null, this, "ERROR, worng level input", level);
+		}
 	}
 	//*************************************************************************************************
 
@@ -351,22 +366,7 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	 */
 	public MyGameGUI() {
 		StdDraw.setCanvasSize(1200, 640);
-		int level=0;
-		String scenario_num="";
-		try {
-			scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
-			level=Integer.parseInt(scenario_num);
-			while(level>23||level<0) {
-				JOptionPane.showMessageDialog((Component) this.game, "ERROR, worng level input, please try again");
-				scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
-				level=Integer.parseInt(scenario_num);
-			}
-			this.game=Game_Server.getServer(level);
-			GraphInit();
-		}
-		catch (Exception e) {
-			JOptionPane.showMessageDialog( null, this, "ERROR, worng level input", level);
-		}
+		chooseLevel();
 	}
 	//************************************** private field **************************************
 	private game_service game;
@@ -379,22 +379,20 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	@Override
 	public void run() {  
 		try {
-			List<String> robotoss=this.game.getRobots();
-			Iterator<String> rr=robotoss.iterator();
 			while(true) {
 				this.game.move();
 				StdDraw.clear();
+				StdDraw.enableDoubleBuffering();
 				GraphInit();
 				drawFruit();
 				drawRobbots();
-				Thread.sleep(10);
+				StdDraw.disableDoubleBuffering();
+				StdDraw.show();
+				Thread.sleep(100);
 			}
-
-			//Thread.sleep(60000);
 		}
 		catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		this.game.stopGame();
 	}
 }//end of the class
