@@ -5,13 +5,11 @@ import java.awt.Component;
 import java.awt.Dialog;
 import java.awt.FileDialog;
 import java.awt.Font;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.rmi.dgc.DGC;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -22,6 +20,8 @@ import javax.swing.JOptionPane;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.sun.source.tree.Tree;
 
 import Server.Game_Server;
 import Server.game_service;
@@ -56,7 +56,8 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		//drayPicture(gg);
 		drawNodes(gg);
 		drawEdges(gg);
-		chooserGame(gg);
+		if(!game.isRunning())
+			chooserGame(gg);
 	}
 
 	/**
@@ -134,7 +135,7 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 			}
 			iRun++;
 		}
-	}
+	} 
 
 	/**
 	 * draw all the robots at the first time
@@ -237,7 +238,6 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	private void manuallyGameManger(DGraph gg) {
 		drawFruit ();
 		String thisGame=this.game.toString();
-		System.out.println(thisGame);
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
 		for(int i=0;i<numRob;i++) {
@@ -249,7 +249,6 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		drawRobbots();
 		this.game.startGame();
 		manuallyGame();
-
 	} 
 
 	/**
@@ -257,38 +256,34 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	 */
 	private void manuallyGame() {
 		List<String> robotoss=this.game.getRobots();
-
+		Thread tt=new Thread(this);
 		while(this.game.isRunning()) {
-			Thread dd=new Thread(this);
-			dd.start();
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
-			}
+
 			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
 					+ " that you want to move to"); 
 			int nextVV=Integer.parseInt(chooseStart);
 			String rrToMove=JOptionPane.showInputDialog(this.game,"ctype your robot id"
 					+ " ? 1 ?2? and so on..."); 
-			int rrToMoveInt=Integer.parseInt(rrToMove);
+			int rrToMoveInt=Integer.parseInt(rrToMove)-1;
+
 			try {
 				robbot rr=new robbot(robotoss.get(rrToMoveInt));
+				int gg=rr.getId();
 				this.game.chooseNextEdge(rr.getId(), nextVV);
-				this.game.move();
+				robbot rr11=new robbot(robotoss.get(rrToMoveInt));
+				tt.start();
+
 			}
 			//if the number of the robot id that the user enterd was wrong then it runs again
 			//recursively
 			catch (Exception e) {
 				JOptionPane.showMessageDialog( null, this, "ERROR, worng level input,"
 						+ "try again", rrToMoveInt);
-				manuallyGame();
+				e.printStackTrace();
 			}
+			try {
+				Thread.sleep(4000);} catch (InterruptedException e1) {e1.printStackTrace();}
 		}
-	}
-
-	private void automaticallyGame(DGraph gg) {
-
 	}
 
 	//********************************************Game chooser********************************************
@@ -368,7 +363,6 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 			}
 			this.game=Game_Server.getServer(level);
 			GraphInit();
-			//drawFruitAndRobbots ();
 		}
 		catch (Exception e) {
 			JOptionPane.showMessageDialog( null, this, "ERROR, worng level input", level);
@@ -383,15 +377,20 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	 * run method of the thread
 	 */
 	@Override
-	public void run() {
+	public void run() {  
 		try {
-			Thread.sleep(4000);
-			manuallyGame();
+			List<String> robotoss=this.game.getRobots();
+			Iterator<String> rr=robotoss.iterator();
+			while(true) {
+				this.game.move();
+				StdDraw.clear();
+				GraphInit();
+				drawFruit();
+				drawRobbots();
+				Thread.sleep(10);
+			}
 
-
-
-
-			Thread.sleep(60000);
+			//Thread.sleep(60000);
 		}
 		catch (InterruptedException e) {
 			e.printStackTrace();
