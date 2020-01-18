@@ -8,12 +8,16 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.rmi.dgc.DGC;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import org.json.JSONException;
@@ -26,32 +30,33 @@ import dataStructure.*;
 import oop_dataStructure.oop_graph;
 import utils.*;
 
-public class MyGameGUI implements Runnable {
+public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 
 	/**
 	 * take the name of the picture of the earth to put at the canvas
-
-	public void drayPicture (DGraph gg) {
-		String gameDitales=this.game.toString();
-		gameServerString gamePlayNow=new gameServerString(gameDitales);
-		String allPicData=gamePlayNow.getgraphId();
-		String [] picData =allPicData.split("/");
-		Range middleOfCanvas=setRangeScale(gg);
-		StdDraw.picture(middleOfCanvas.get_max(), middleOfCanvas.get_min(), picData[1]+".png");
-	}*/
+	 */
+	//	private void drayPicture (DGraph gg) {
+	//		String gameDitales=this.game.toString();
+	//		gameServerString gamePlayNow=new gameServerString(gameDitales);
+	//		String allPicData=gamePlayNow.getgraphId();
+	//		String [] picData =allPicData.split("/");
+	//		Range middleOfCanvas=setRangeScale(gg);
+	//		StdDraw.picture(middleOfCanvas.get_max(), middleOfCanvas.get_min(), picData[1]+".png");
+	//	}
 
 	/**
 	 * this method is take the string with the details of the specific graph and make from it 
 	 * the graph at the DGraph class with the method that create a graph from JSONString 
 	 * and then send the graph to draw the nodes and the edges
 	 */
-	public void GraphInit() {
+	private void GraphInit() {
 		String g = game.getGraph();
 		DGraph gg = new DGraph();
 		gg.init(g);
 		//drayPicture(gg);
 		drawNodes(gg);
 		drawEdges(gg);
+		chooserGame(gg);
 	}
 
 	/**
@@ -100,10 +105,10 @@ public class MyGameGUI implements Runnable {
 	 * this method puts the fruits and the robbots at the first tome
 	 * near to the fruits 
 	 */
-	public void drawFruitAndRobbots () {
-		String gameDitales=this.game.toString();
-		gameServerString gamePlayNow=new gameServerString(gameDitales);
-
+	private void drawFruit () {
+		//String gameDitales=this.game.toString();
+		//gameServerString gamePlayNow=new gameServerString(gameDitales);
+		int iRun=1;
 		List<String> ff=this.game.getFruits();
 		Iterator<String> ff_it=ff.iterator();
 		while(ff_it.hasNext()) {
@@ -113,107 +118,84 @@ public class MyGameGUI implements Runnable {
 				StdDraw.setPenColor(Color.ORANGE);
 				StdDraw.setPenRadius(0.035);
 				StdDraw.point(pF1.x(), pF1.y());
+				StdDraw.setPenColor(Color.red);
+				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
+				StdDraw.text(pF1.x()+0.0004, pF1.y()+0.0002, "Fruit "+iRun);
+				//StdDraw.picture(pF1.x(), pF1.y(), "banana.png", 100, 100);
+				//StdDraw.picture(pF1.x(), pF1.y(), "banana.png");
 			}
 			else if(f1.getType()==1) {
 				StdDraw.setPenColor(Color.DARK_GRAY);
 				StdDraw.setPenRadius(0.035);
 				StdDraw.point(pF1.x(), pF1.y());
+				StdDraw.setPenColor(Color.red);
+				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
+				StdDraw.text(pF1.x()+0.0004, pF1.y()+0.0002, "Fruit "+iRun);
 			}
+			iRun++;
 		}
+	}
 
+	/**
+	 * draw all the robots at the first time
+	 */
+	private void drawRobbots() {
+		int iRun=1;
+		List<String> robotoss=this.game.getRobots();
+		Iterator<String> r_iter = robotoss.iterator();
+		while(r_iter.hasNext()) {
+			robbot rr=new robbot(r_iter.next());
+			Point3D ppRob=new Point3D(rr.getlocation());
+			StdDraw.setPenColor(Color.GREEN);
+			StdDraw.setPenRadius(0.035);
+			StdDraw.point(ppRob.x(), ppRob.y());
+			StdDraw.setPenColor(Color.red);
+			StdDraw.text(ppRob.x()+0.0004, ppRob.y()+0.0002, "Robot "+iRun);
+			iRun++;
+		}
+	}
 
+	/**
+	 * this method movea all the robots for the manually game
+	 */
+	private void moveRobManually (DGraph gg) {
+		while(this.game.isRunning()) {
+			String chooseNode=JOptionPane.showInputDialog(this.game,"choose the next vertex which"
+					+ " you want to move to");
+			int nextVV=Integer.parseInt(chooseNode);
+			//	this.game.chooseNextEdge(startVV, nextVV);
+		}
 	}
 
 	/**
 	 * 
+	 * @param game
+	 * @param gg
 	 */
-	public void drawRobbots(DGraph gg) {
-		List<String> fruits=this.game.getFruits();
-		Iterator<String> f_iter = fruits.iterator();
-		//running all over all the fruits
-		/*while(f_iter.hasNext()) {
-			fruit ff=new fruit(f_iter.next());
-			Point3D ffP=new Point3D(ff.getlocation());
-			//to every fruit run on all the graph to find his place and the put the robot near it
-			Collection<node_data> vert=gg.getV();
-			Iterator<node_data> vert_it=vert.iterator();
-			while(vert_it.hasNext()) {
-				node_data tempV=vert_it.next();
-				Collection<edge_data> egdesVert=gg.getE(tempV.getKey());
-				Iterator<edge_data> egdesVert_it=egdesVert.iterator();
-				while(egdesVert_it.hasNext()) {
-					edge_data ee=egdesVert_it.next();
-					Point3D locSrc=new Point3D(gg.getNode(ee.getSrc()).getLocation().x(), 
-							gg.getNode(ee.getSrc()).getLocation().y());
-					Point3D locDest=new Point3D(gg.getNode(ee.getDest()).getLocation().x(), 
-							gg.getNode(ee.getDest()).getLocation().y());
-					//coagulating the distance of the line based on PITAGORAS
-					double powerX=Math.pow((locSrc.x()-locDest.x()), 2);
-					double powerY=Math.pow((locSrc.y()-locDest.y()), 2);
-					double dd=Math.sqrt(powerX+powerY);
-					//end all line coagulating
-
-					if(ee.getSrc()<0) {
-
-					}
-				}
-
-
-			}
-		}
-		List<String> rr=this.game.getRobots();
-		Iterator<String> rr_it=rr.iterator();
-		StdDraw.setPenColor(Color.ORANGE);
-		StdDraw.setPenRadius(0.050);
-		int i=1;
-		while(rr_it.hasNext()) {
-			this.game.addRobot(i);
-			robbot r1=new robbot(rr_it.next());
-			Point3D pp=new Point3D(r1.getlocation());
-			StdDraw.point(pp.x(), pp.y());
-			i++;
-		}*/
-		//int robbots =gamePlayNow.getNumRobbots();
-		
-		StdDraw.setPenColor(Color.ORANGE);
-		StdDraw.setPenRadius(0.035);
-		
-		int rr=this.game.getRobots().size();
-		for(int i=0;i<rr;i++) {
-			this.game.addRobot(0+i);
-		}
-		this.game.startGame();
-		while(game.isRunning()) {
-			moveRobots(game, gg);
-		}
-
-	}
-
-	
-	private void moveRobots(game_service game, DGraph gg) {
-		List<String> log = game.move();
-		if(log!=null) {
-			long t = game.timeToEnd();
-			for(int i=0;i<log.size();i++) {
-				String robot_json = log.get(i);
-				try {
-					JSONObject line = new JSONObject(robot_json);
-					JSONObject ttt = line.getJSONObject("Robot");
-					int rid = ttt.getInt("id");
-					int src = ttt.getInt("src");
-					int dest = ttt.getInt("dest");
-				
-					if(dest==-1) {	
-						
-						game.chooseNextEdge(rid, dest);
-						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
-						System.out.println(ttt);
-					}
-				} 
-				catch (JSONException e) {e.printStackTrace();}
-			}
-		}
-	}
+	//	private void moveRobots(game_service game, DGraph gg) {
+	//		List<String> log = game.move();
+	//		if(log!=null) {
+	//			long t = game.timeToEnd();
+	//			for(int i=0;i<log.size();i++) {
+	//				String robot_json = log.get(i);
+	//				try {
+	//					JSONObject line = new JSONObject(robot_json);
+	//					JSONObject ttt = line.getJSONObject("Robot");
+	//					int rid = ttt.getInt("id");
+	//					int src = ttt.getInt("src");
+	//					int dest = ttt.getInt("dest");
+	//
+	//					if(dest==-1) {	
+	//
+	//						game.chooseNextEdge(rid, dest);
+	//						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
+	//						System.out.println(ttt);
+	//					}
+	//				} 
+	//				catch (JSONException e) {e.printStackTrace();}
+	//			}
+	//		}
+	//	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -246,39 +228,174 @@ public class MyGameGUI implements Runnable {
 		return middle;
 	}
 
+	//********************************************manually game method************************************
+
+	/**
+	 * the manually game manger , puts the first robots at the chosen vertices, and send
+	 * them to draw the robots
+	 */
+	private void manuallyGameManger(DGraph gg) {
+		drawFruit ();
+		String thisGame=this.game.toString();
+		System.out.println(thisGame);
+		gameServerString thisGamee=new gameServerString(thisGame);
+		int numRob=thisGamee.getNumRobbots();
+		for(int i=0;i<numRob;i++) {
+			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
+					+ " that you want to start with robot number "+i); 
+			int startVV=Integer.parseInt(chooseStart);
+			this.game.addRobot(startVV);
+		}
+		drawRobbots();
+		this.game.startGame();
+		manuallyGame();
+
+	} 
+
+	/**
+	 * 
+	 */
+	private void manuallyGame() {
+		List<String> robotoss=this.game.getRobots();
+
+		while(this.game.isRunning()) {
+			Thread dd=new Thread(this);
+			dd.start();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
+			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
+					+ " that you want to move to"); 
+			int nextVV=Integer.parseInt(chooseStart);
+			String rrToMove=JOptionPane.showInputDialog(this.game,"ctype your robot id"
+					+ " ? 1 ?2? and so on..."); 
+			int rrToMoveInt=Integer.parseInt(rrToMove);
+			try {
+				robbot rr=new robbot(robotoss.get(rrToMoveInt));
+				this.game.chooseNextEdge(rr.getId(), nextVV);
+				this.game.move();
+			}
+			//if the number of the robot id that the user enterd was wrong then it runs again
+			//recursively
+			catch (Exception e) {
+				JOptionPane.showMessageDialog( null, this, "ERROR, worng level input,"
+						+ "try again", rrToMoveInt);
+				manuallyGame();
+			}
+		}
+	}
+
+	private void automaticallyGame(DGraph gg) {
+
+	}
+
+	//********************************************Game chooser********************************************
+
+	/**
+	 * this method is about to let the user decide if he want to play automatically or manually,have to write
+	 * 0 to automatically or 1 to manually, and if he put other number it will run again until he puts 0 o 1
+	 */
+	private void chooserGame(DGraph gg) {
+		String chooseStr="-1";
+		int choose=-1;
+		chooseStr =JOptionPane.showInputDialog(this.game,"Choose 1 to play"
+				+ " manually or 0  to play automatically");
+		choose=Integer.parseInt(chooseStr);
+		while(choose!=0&&choose!=1) {
+			chooseStr=JOptionPane.showInputDialog( this.game, "ERROR, worng level input, please try again");
+			choose=Integer.parseInt(chooseStr);
+		}
+		if(choose==1) 
+			manuallyGameManger(gg);
+		else if(choose==0)
+			automaticallyGame(gg);
+	}
+	//*************************************************************************************************
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	//************************************** Contractor **************************************
 	/**
 	 * the game will ask the user insert a level until he will put a correct number : 0-23
 	 */
 	public MyGameGUI() {
 		StdDraw.setCanvasSize(1200, 640);
-		String scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
-		int level=Integer.parseInt(scenario_num);
-		while(level>23||level<0) {
-			JOptionPane.showMessageDialog((Component) this.game, "ERROR, worng level input, please try again");
+		int level=0;
+		String scenario_num="";
+		try {
 			scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
 			level=Integer.parseInt(scenario_num);
+			while(level>23||level<0) {
+				JOptionPane.showMessageDialog((Component) this.game, "ERROR, worng level input, please try again");
+				scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
+				level=Integer.parseInt(scenario_num);
+			}
+			this.game=Game_Server.getServer(level);
+			GraphInit();
+			//drawFruitAndRobbots ();
 		}
-		this.game=Game_Server.getServer(level);
-		Thread dd=new Thread(this);
-		dd.start();
-		GraphInit();
+		catch (Exception e) {
+			JOptionPane.showMessageDialog( null, this, "ERROR, worng level input", level);
+		}
 	}
 	//************************************** private field **************************************
 	private game_service game;
 	//**********************************************************************************************************
+
+	/*******************************the Thread run method ******************************************************
 	/**
 	 * run method of the thread
 	 */
 	@Override
 	public void run() {
-		while(true) {
-			try {
-				Thread.sleep(1000);} catch (InterruptedException e) {
-					e.printStackTrace();}
-			GraphInit();
-			//drawRobbots();
-			drawFruitAndRobbots ();
+		try {
+			Thread.sleep(4000);
+			manuallyGame();
 
+
+
+
+			Thread.sleep(60000);
 		}
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		this.game.stopGame();
 	}
 }//end of the class
