@@ -36,12 +36,15 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	/**
 	 * take the name of the picture of the earth to put at the canvas
 	 */
-	private void drayPicture (DGraph gg) {
+	private void drawPicture (DGraph gg,Point3D pp) {
 		String gameDitales=this.game.toString();
 		gameServerString gamePlayNow=new gameServerString(gameDitales);
-		String picData=gamePlayNow.getgraphId();
-		Range middleOfCanvas=setRangeScale(gg);
-		StdDraw.picture(middleOfCanvas.get_max(), middleOfCanvas.get_min(), picData+".png");
+		String allPicData=gamePlayNow.getgraphId();
+		String [] justName=allPicData.split("/");
+		String fullName=justName[1];
+		String allPath
+		="C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\data\\"+fullName+".png";		
+		StdDraw.picture(pp.x(), pp.y(), allPath);
 	}
 
 	/**
@@ -53,7 +56,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		String g = game.getGraph();
 		DGraph gg = new DGraph();
 		gg.init(g);
-		//drayPicture(gg);
 		drawNodes(gg);
 		drawEdges(gg);
 		if(!game.isRunning())
@@ -65,6 +67,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 */
 	private void drawNodes(DGraph gg) {
 		Range tt=setRangeScale(gg);
+		Point3D ppMap=new Point3D(tt.get_min(), tt.get_max());
+		drawPicture(gg ,ppMap);
 		Collection<node_data> vert=gg.getV();
 		Iterator<node_data> vert_it=vert.iterator();
 		StdDraw.setPenColor(Color.BLACK);
@@ -73,7 +77,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			node_data tempV=vert_it.next();
 			Point3D pp=new Point3D(tempV.getLocation());
 			StdDraw.point(pp.x(), pp.y());
-
 			//drawing the id number of the node
 			StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 15));
 			StdDraw.text(pp.x()+0.0004, pp.y()+0.0002, String.valueOf(tempV.getKey()));
@@ -146,17 +149,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
-	/**
-	 * this method movea all the robots for the manually game
-	 */
-	private void moveRobManually (DGraph gg) {
-		while(this.game.isRunning()) {
-			String chooseNode=JOptionPane.showInputDialog(this.game,"choose the next vertex which"
-					+ " you want to move to");
-			int nextVV=Integer.parseInt(chooseNode);
-			//	this.game.chooseNextEdge(startVV, nextVV);
-		}
-	}
 
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
@@ -183,7 +175,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		StdDraw.setXscale(minX-0.0006, maxX+0.0006);
 		StdDraw.setYscale(minY-0.0006, maxY+0.0006);		
 
-		Range middle =new Range(((-1*minX)+maxX)/2, ((-1*minY)+maxY)/2);
+		Range middleX =new Range(minX, maxX);
+		double xMid=(middleX.get_length()/2)+minX;
+		Range middleY =new Range(minY, maxY);
+		double yMid=(middleY.get_length()/2)+minY;
+		Range middle =new Range(xMid, yMid);
 		//i am not use the range object "middle" at his purpose , 
 		//i decided to put it not minimum and maximum,nut to put the
 		//middle of x and middle of y scales to draw the picture of the map
@@ -202,7 +198,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
 		for(int i=1;i<=numRob;i++) {
-			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
+			String chooseStart=JOptionPane.showInputDialog(this,"choose the vertex"
 					+ " that you want to start with robot number "+i); 
 			int startVV=Integer.parseInt(chooseStart);
 			this.game.addRobot(startVV);
@@ -222,18 +218,20 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			tt.start();
 			while(this.game.isRunning()) {
 				Thread.sleep(1000);
-				String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
+				String chooseStart=JOptionPane.showInputDialog(this,"choose the vertex"
 						+ " that you want to move to"); 
 				int nextVV=Integer.parseInt(chooseStart);
-				String rrToMove=JOptionPane.showInputDialog(this.game,"ctype your robot id"
+				String rrToMove=JOptionPane.showInputDialog(this,"ctype your robot id"
 						+ " ? 1 ?2? and so on..."); 
 				int rrToMoveInt=Integer.parseInt(rrToMove)-1;
 				robbot rr=new robbot(robotoss.get(rrToMoveInt));
 				this.game.chooseNextEdge(rr.getId(), nextVV);
 
 				if(this.game.timeToEnd()/1000==0) {
-					JOptionPane.showMessageDialog(this, "GAME OVER");
-					StdDraw.
+					//JOptionPane.showMessageDialog(this, "GAME OVER");
+					StdDraw.clear();
+					StdDraw.picture(0.0005, 0.0005, "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+							+ "gameOver.png", 0.001, 0.001);
 					Thread.sleep(250);
 					rr=new robbot(robotoss.get(rrToMoveInt));
 					JOptionPane.showMessageDialog(this, "The score of the robot is"+rr.getValue());
@@ -254,11 +252,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private void chooserGame(DGraph gg) {
 		String chooseStr="-1";
 		int choose=-1;
-		chooseStr =JOptionPane.showInputDialog(this.game,"Choose 1 to play"
+		chooseStr =JOptionPane.showInputDialog(this,"Choose 1 to play"
 				+ " manually or 0  to play automatically");
 		choose=Integer.parseInt(chooseStr);
 		while(choose!=0&&choose!=1) {
-			chooseStr=JOptionPane.showInputDialog( this.game, "ERROR, worng level input, please try again");
+			chooseStr=JOptionPane.showInputDialog( this, "ERROR, worng level input, please try again");
 			choose=Integer.parseInt(chooseStr);
 		}
 		if(choose==1) 
@@ -278,8 +276,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
 			level=Integer.parseInt(scenario_num);
 			while(level>23||level<0) {
-				JOptionPane.showMessageDialog((Component) this.game, "ERROR, worng level input, please try again");
-				scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
+				JOptionPane.showMessageDialog( this, "ERROR, worng level input, please try again");
+				scenario_num =JOptionPane.showInputDialog(this,"Choose a level to the game");
 				level=Integer.parseInt(scenario_num);
 			}
 			this.game=Game_Server.getServer(level);
