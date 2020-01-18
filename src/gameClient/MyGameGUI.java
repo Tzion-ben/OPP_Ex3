@@ -16,6 +16,7 @@ import java.util.List;
 
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import org.json.JSONException;
@@ -30,7 +31,7 @@ import dataStructure.*;
 import oop_dataStructure.oop_graph;
 import utils.*;
 
-public class MyGameGUI implements ActionListener, MouseListener, Runnable {
+public class MyGameGUI extends JFrame implements ActionListener, MouseListener, Runnable {
 
 	/**
 	 * take the name of the picture of the earth to put at the canvas
@@ -107,33 +108,24 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	 * near to the fruits 
 	 */
 	private void drawFruit () {
-		//String gameDitales=this.game.toString();
-		//gameServerString gamePlayNow=new gameServerString(gameDitales);
-		int iRun=1;
 		List<String> ff=this.game.getFruits();
 		Iterator<String> ff_it=ff.iterator();
 		while(ff_it.hasNext()) {
 			fruit f1=new fruit(ff_it.next());
 			Point3D pF1=new Point3D(f1.getlocation());
 			if(f1.getType()==-1) {
-				StdDraw.setPenColor(Color.ORANGE);
-				StdDraw.setPenRadius(0.035);
-				StdDraw.point(pF1.x(), pF1.y());
+				
 				StdDraw.setPenColor(Color.red);
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
-				StdDraw.text(pF1.x()+0.0004, pF1.y()+0.0002, "Fruit "+iRun);
-				//StdDraw.picture(pF1.x(), pF1.y(), "banana.png", 100, 100);
-				//StdDraw.picture(pF1.x(), pF1.y(), "banana.png");
+				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+						+ "banana.png", 0.0012, 0.0012);
 			}
 			else if(f1.getType()==1) {
-				StdDraw.setPenColor(Color.DARK_GRAY);
-				StdDraw.setPenRadius(0.035);
-				StdDraw.point(pF1.x(), pF1.y());
-				StdDraw.setPenColor(Color.red);
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
-				StdDraw.text(pF1.x()+0.0004, pF1.y()+0.0002, "Fruit "+iRun);
+				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+						+ "apple.png", 0.0012, 0.0012);
 			}
-			iRun++;
+			
 		}
 	} 
 
@@ -147,11 +139,10 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		while(r_iter.hasNext()) {
 			robbot rr=new robbot(r_iter.next());
 			Point3D ppRob=new Point3D(rr.getlocation());
-			StdDraw.setPenColor(Color.GREEN);
-			StdDraw.setPenRadius(0.035);
-			StdDraw.point(ppRob.x(), ppRob.y());
 			StdDraw.setPenColor(Color.red);
 			StdDraw.text(ppRob.x()+0.0004, ppRob.y()+0.0002, "Robot "+iRun);
+			StdDraw.picture(ppRob.x(), ppRob.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+					+ "robot.jpg", 0.0012, 0.0012);
 			iRun++;
 		}
 	}
@@ -240,14 +231,13 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		String thisGame=this.game.toString();
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
-		for(int i=0;i<numRob;i++) {
+		for(int i=1;i<=numRob;i++) {
 			String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
 					+ " that you want to start with robot number "+i); 
 			int startVV=Integer.parseInt(chooseStart);
 			this.game.addRobot(startVV);
 		}
 		drawRobbots();
-		this.game.startGame();
 		manuallyGame();
 	} 
 
@@ -258,8 +248,10 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 		try {
 			List<String> robotoss=this.game.getRobots();
 			Thread tt=new Thread(this);
+			this.game.startGame();
+			tt.start();
 			while(this.game.isRunning()) {
-
+				Thread.sleep(1000);
 				String chooseStart=JOptionPane.showInputDialog(this.game,"choose the vertex"
 						+ " that you want to move to"); 
 				int nextVV=Integer.parseInt(chooseStart);
@@ -268,11 +260,15 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 				int rrToMoveInt=Integer.parseInt(rrToMove)-1;
 				robbot rr=new robbot(robotoss.get(rrToMoveInt));
 				this.game.chooseNextEdge(rr.getId(), nextVV);
-				tt.start();
-				System.out.println(this.game.timeToEnd()/1000);
-				if (this.game.timeToEnd()==0)
+
+				if(this.game.timeToEnd()/1000==0) {
+					JOptionPane.showMessageDialog(this, "GAME OVER");
+					Thread.sleep(250);
+					rr=new robbot(robotoss.get(rrToMoveInt));
+					JOptionPane.showMessageDialog(this, "The csore of the robot is"+rr.getValue());
 					this.game.stopGame();
-			}		
+				}
+			}
 		}
 		catch (Exception e) {
 			e.getStackTrace();}
@@ -319,7 +315,8 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 			GraphInit();
 		}
 		catch (Exception e) {
-			JOptionPane.showMessageDialog( null, this, "ERROR, worng level input", level);
+			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
+			chooseLevel();
 		}
 	}
 	//*************************************************************************************************
@@ -379,7 +376,7 @@ public class MyGameGUI implements ActionListener, MouseListener, Runnable {
 	@Override
 	public void run() {  
 		try {
-			while(true) {
+			while(this.game.timeToEnd()/1000!=0) {
 				this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
