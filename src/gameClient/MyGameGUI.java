@@ -188,6 +188,51 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		return middle;
 	}
 
+	/**
+	 * 
+	 * @param gg
+	 * @return
+	 */
+	private Point3D calculateFriutPosion(DGraph gg) {
+		Point3D pp=new Point3D(0,0,0);
+
+		Collection<node_data> vv=gg.getV();
+		Iterator<node_data> vv_iter=vv.iterator();
+
+		List<String> fruitss=this.game.getFruits();
+		Iterator<String> f_iter=fruitss.iterator();
+		while(f_iter.hasNext()) {
+			fruit ff=new fruit(f_iter.next());
+			Point3D pF=new Point3D(ff.getlocation());
+			while(vv_iter.hasNext()) {
+				node_data nn=vv_iter.next();
+				Point3D nnPP=nn.getLocation();
+				if((pF.x()-nnPP.x())==1||(nnPP.x()-pF.x())==1) {//it mean that if the vertex is in radios 
+					//of 1 maximum from the fruit them work on his edges
+					Collection<edge_data> eVV=gg.getE(nn.getKey());
+					Iterator <edge_data> ee=eVV.iterator();
+					//iterate on all his edges
+					while(ee.hasNext()) {
+						edge_data tempEE=ee.next();
+						int srcE=tempEE.getSrc();
+						int destE=tempEE.getDest();
+						Point3D srcEPoint=new Point3D(gg.getNode(srcE).getLocation());
+						Point3D destEPoint=new Point3D(gg.getNode(destE).getLocation());
+						double xPower=Math.pow((srcEPoint.x()-destEPoint.x()), 2);
+						double yPower=Math.pow((srcEPoint.y()-destEPoint.y()), 2);
+						double destance =Math.sqrt(xPower+yPower);
+
+					}
+
+				}
+			}
+		}
+
+
+
+		return pp;
+	}
+
 	//********************************************manually game method************************************
 
 	/**
@@ -216,7 +261,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	} 
 
 	/**
-	 * 
+	 * this method is activate the manually game with all the drawing mehtods and the thread, 
+	 * and in the end it print out the scores of all the robots
 	 */
 	private void manuallyGame() {
 		try {
@@ -250,14 +296,35 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				Thread.sleep(1000);
 				JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 			}
-
 		}
 		catch (Exception e) {
 			e.getStackTrace();
-
 		}
 	}
 
+	/**
+	 * 
+	 */
+	private void automaticallyGameManger(DGraph gg) {
+		drawFruit ();
+		String thisGame=this.game.toString();
+		gameServerString thisGamee=new gameServerString(thisGame);
+		int numRob=thisGamee.getNumRobbots();
+		calculateFriutPosion(gg);
+		for(int i=1;i<=numRob;i++) {
+			//this.game.addRobot(startVV);
+			manuallyGameManger(gg);
+		}
+		drawRobbots();
+		automaticallyGame();
+	}
+
+	/**
+	 * 
+	 */
+	private void automaticallyGame() {
+
+	}
 	//********************************************Game choosers********************************************
 
 	/**
@@ -277,8 +344,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			}
 			if(choose==1) 
 				manuallyGameManger(gg);
-			//else if(choose==0)
-			//automaticallyGame(gg);
+			else if(choose==0)
+				automaticallyGameManger(gg);
 		}
 		catch (Exception e) {
 			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
@@ -355,7 +422,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	//************************************** Contractor **************************************
-
 	public MyGameGUI() {
 		StdDraw.setCanvasSize(1200, 640);
 		chooseLevel();
