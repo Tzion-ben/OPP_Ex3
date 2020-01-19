@@ -193,9 +193,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 * @param gg
 	 * @return
 	 */
-	private Point3D calculateFriutPosion(DGraph gg) {
-		Point3D pp=new Point3D(0,0,0);
+	private int calculateFriutPosionToEdge(DGraph gg) {
 
+		double EPS=00000.1;//epsilon to calculation in the future
 		Collection<node_data> vv=gg.getV();
 		Iterator<node_data> vv_iter=vv.iterator();
 
@@ -218,19 +218,26 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						int destE=tempEE.getDest();
 						Point3D srcEPoint=new Point3D(gg.getNode(srcE).getLocation());
 						Point3D destEPoint=new Point3D(gg.getNode(destE).getLocation());
-						double xPower=Math.pow((srcEPoint.x()-destEPoint.x()), 2);
-						double yPower=Math.pow((srcEPoint.y()-destEPoint.y()), 2);
-						double destance =Math.sqrt(xPower+yPower);
-
+						//calculating the distance of the edge
+						double xPowerE=Math.pow((srcEPoint.x()-destEPoint.x()), 2);
+						double yPowerE=Math.pow((srcEPoint.y()-destEPoint.y()), 2);
+						double destanceE =Math.sqrt(xPowerE+yPowerE);
+						//calculating the distance from the fruit to the one side of the edge
+						double xPowerEFS1=Math.pow((srcEPoint.x()-pF.x()), 2);
+						double yPowerEFS1=Math.pow((srcEPoint.y()-pF.y()), 2);
+						double destanceEFS1 =Math.sqrt(xPowerEFS1+yPowerEFS1);
+						//calculating the distance from the fruit to the one side of the edge
+						double xPowerEFS2=Math.pow((pF.x()-destEPoint.x()), 2);
+						double yPowerEFS2=Math.pow((pF.y()-destEPoint.y()), 2);
+						double destanceEFS2 =Math.sqrt(xPowerEFS2+yPowerEFS2);
+						if((destanceEFS1+destanceEFS2+EPS)==destanceE) {
+							return srcE;
+						}	
 					}
-
 				}
 			}
 		}
-
-
-
-		return pp;
+		return -1;
 	}
 
 	//********************************************manually game method************************************
@@ -310,7 +317,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		String thisGame=this.game.toString();
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
-		calculateFriutPosion(gg);
+		int srcOfPosFruit =calculateFriutPosionToEdge(gg);
 		for(int i=1;i<=numRob;i++) {
 			//this.game.addRobot(startVV);
 			manuallyGameManger(gg);
