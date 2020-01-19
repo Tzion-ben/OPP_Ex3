@@ -10,9 +10,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.AbstractButton;
 import javax.swing.JButton;
@@ -151,7 +154,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
-
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -187,59 +189,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		//middle of x and middle of y scales to draw the picture of the map
 		return middle;
 	}
-
-	/**
-	 * 
-	 * @param gg
-	 * @return
-	 */
-	private int calculateFriutPosionToEdge(DGraph gg) {
-
-		double EPS=00000.1;//epsilon to calculation in the future
-		Collection<node_data> vv=gg.getV();
-		Iterator<node_data> vv_iter=vv.iterator();
-
-		List<String> fruitss=this.game.getFruits();
-		Iterator<String> f_iter=fruitss.iterator();
-		while(f_iter.hasNext()) {
-			fruit ff=new fruit(f_iter.next());
-			Point3D pF=new Point3D(ff.getlocation());
-			while(vv_iter.hasNext()) {
-				node_data nn=vv_iter.next();
-				Point3D nnPP=nn.getLocation();
-				if((pF.x()-nnPP.x())==1||(nnPP.x()-pF.x())==1) {//it mean that if the vertex is in radios 
-					//of 1 maximum from the fruit them work on his edges
-					Collection<edge_data> eVV=gg.getE(nn.getKey());
-					Iterator <edge_data> ee=eVV.iterator();
-					//iterate on all his edges
-					while(ee.hasNext()) {
-						edge_data tempEE=ee.next();
-						int srcE=tempEE.getSrc();
-						int destE=tempEE.getDest();
-						Point3D srcEPoint=new Point3D(gg.getNode(srcE).getLocation());
-						Point3D destEPoint=new Point3D(gg.getNode(destE).getLocation());
-						//calculating the distance of the edge
-						double xPowerE=Math.pow((srcEPoint.x()-destEPoint.x()), 2);
-						double yPowerE=Math.pow((srcEPoint.y()-destEPoint.y()), 2);
-						double destanceE =Math.sqrt(xPowerE+yPowerE);
-						//calculating the distance from the fruit to the one side of the edge
-						double xPowerEFS1=Math.pow((srcEPoint.x()-pF.x()), 2);
-						double yPowerEFS1=Math.pow((srcEPoint.y()-pF.y()), 2);
-						double destanceEFS1 =Math.sqrt(xPowerEFS1+yPowerEFS1);
-						//calculating the distance from the fruit to the one side of the edge
-						double xPowerEFS2=Math.pow((pF.x()-destEPoint.x()), 2);
-						double yPowerEFS2=Math.pow((pF.y()-destEPoint.y()), 2);
-						double destanceEFS2 =Math.sqrt(xPowerEFS2+yPowerEFS2);
-						if((destanceEFS1+destanceEFS2+EPS)==destanceE) {
-							return srcE;
-						}	
-					}
-				}
-			}
-		}
-		return -1;
-	}
-
+	
+	
 	//********************************************manually game method************************************
 
 	/**
@@ -309,25 +260,41 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
+	//****************************************automatically game method************************************
 	/**
-	 * 
+	 * the automatically game manger , puts the first robots at the chosen vertices with the logicalt algorithem
+	 * at the gameLogicaly class
+	 * and send them to draw the robots and activate the manually Game
 	 */
 	private void automaticallyGameManger(DGraph gg) {
 		drawFruit ();
 		String thisGame=this.game.toString();
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
-		int srcOfPosFruit =calculateFriutPosionToEdge(gg);
-		for(int i=1;i<=numRob;i++) {
-			//this.game.addRobot(startVV);
-			manuallyGameManger(gg);
+		ArrayList<Integer> srcesOfPosFruit =logicHelp.calculateFriutPosionToEdge(gg, game);
+		int sizeSRC=srcesOfPosFruit.size();
+		//if number of the robots is less then the number of the edges:
+		if(numRob<sizeSRC) {
+			for(int i=1;i<=numRob;i++) 
+				this.game.addRobot(srcesOfPosFruit.get(i));
 		}
+		else {
+			int tt=-1;
+			Iterator<Integer> ssrrcc=srcesOfPosFruit.iterator();
+			while(ssrrcc.hasNext()) {
+				tt=ssrrcc.next();
+				for(int i=1;i<=numRob;i++) 
+					this.game.addRobot(tt);
+			}
+		}
+
 		drawRobbots();
 		automaticallyGame();
 	}
 
 	/**
-	 * 
+	 * this method is activate the automatically game with all the drawing methods and the thread, 
+	 * and in the end it print out the scores of all the robots
 	 */
 	private void automaticallyGame() {
 
@@ -435,6 +402,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 	//************************************** private field **************************************
 	private game_service game;
+	private gameLogicaly logicHelp=new gameLogicaly();
 	//**********************************************************************************************************
 
 	/*******************************the Thread run method ******************************************************
