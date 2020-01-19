@@ -39,12 +39,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private void drawPicture (DGraph gg,Point3D pp) {
 		String gameDitales=this.game.toString();
 		gameServerString gamePlayNow=new gameServerString(gameDitales);
-		String allPicData=gamePlayNow.getgraphId();
-		String [] justName=allPicData.split("/");
-		String fullName=justName[1];
-		String allPath
-		="C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\data\\"+fullName+".png";		
-		StdDraw.picture(pp.x(), pp.y(), allPath);
+		try {
+			String allPicData=gamePlayNow.getgraphId();
+			String [] justName=allPicData.split("/");
+			String fullName=justName[1];
+			String allPath
+			="C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\data\\"+fullName+".png";		
+			StdDraw.picture(pp.x(), pp.y(), allPath);
+		}catch (Exception e){e.getStackTrace();}
 	}
 
 	/**
@@ -198,10 +200,16 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
 		for(int i=1;i<=numRob;i++) {
-			String chooseStart=JOptionPane.showInputDialog(this,"choose the vertex"
-					+ " that you want to start with robot number "+i); 
-			int startVV=Integer.parseInt(chooseStart);
-			this.game.addRobot(startVV);
+			try {
+				String chooseStart=JOptionPane.showInputDialog(this,"choose the vertex"
+						+ " that you want to start with robot number "+i); 
+				int startVV=Integer.parseInt(chooseStart);
+				this.game.addRobot(startVV);
+			}
+			catch (Exception e) {
+				JOptionPane.showMessageDialog(this, "such a vertex is doesn't exist so please try again");
+				manuallyGameManger(gg);
+			}
 		}
 		drawRobbots();
 		manuallyGame();
@@ -228,19 +236,26 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				this.game.chooseNextEdge(rr.getId(), nextVV);
 
 				if(this.game.timeToEnd()/1000==0) {
-					//JOptionPane.showMessageDialog(this, "GAME OVER");
 					StdDraw.clear();
-					StdDraw.picture(0.0005, 0.0005, "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
-							+ "gameOver.png", 0.001, 0.001);
-					Thread.sleep(250);
-					rr=new robbot(robotoss.get(rrToMoveInt));
-					JOptionPane.showMessageDialog(this, "The score of the robot is"+rr.getValue());
+					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
 					this.game.stopGame();
 				}
+			}//end of the while loop
+			//**********iterator to print the score of all the robots after the game
+			List<String> robotosAfter=this.game.getRobots();
+			Iterator<String> r_after=robotosAfter.iterator();
+			int iRun=1;
+			while(r_after.hasNext()) {
+				robbot rrr= new robbot(r_after.next());
+				Thread.sleep(1000);
+				JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 			}
+
 		}
 		catch (Exception e) {
-			e.getStackTrace();}
+			e.getStackTrace();
+
+		}
 	}
 
 	//********************************************Game choosers********************************************
@@ -250,19 +265,25 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 * 0 to automatically or 1 to manually, and if he put other number it will run again until he puts 0 o 1
 	 */
 	private void chooserGame(DGraph gg) {
-		String chooseStr="-1";
-		int choose=-1;
-		chooseStr =JOptionPane.showInputDialog(this,"Choose 1 to play"
-				+ " manually or 0  to play automatically");
-		choose=Integer.parseInt(chooseStr);
-		while(choose!=0&&choose!=1) {
-			chooseStr=JOptionPane.showInputDialog( this, "ERROR, worng level input, please try again");
+		try {
+			String chooseStr="-1";
+			int choose=-1;
+			chooseStr =JOptionPane.showInputDialog(this,"Choose 1 to play"
+					+ " manually or 0  to play automatically");
 			choose=Integer.parseInt(chooseStr);
+			while(choose!=0&&choose!=1) {
+				chooseStr=JOptionPane.showInputDialog( this, "ERROR, worng level input, please try again");
+				choose=Integer.parseInt(chooseStr);
+			}
+			if(choose==1) 
+				manuallyGameManger(gg);
+			//else if(choose==0)
+			//automaticallyGame(gg);
 		}
-		if(choose==1) 
-			manuallyGameManger(gg);
-		//else if(choose==0)
-		//automaticallyGame(gg);
+		catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
+			ExceptionOFGAME();
+		}
 	}
 
 	/**
@@ -273,7 +294,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		int level=0;
 		String scenario_num="";
 		try {
-			scenario_num =JOptionPane.showInputDialog(this.game,"Choose a level to the game");
+			scenario_num =JOptionPane.showInputDialog(this,"Choose a level to the game");
 			level=Integer.parseInt(scenario_num);
 			while(level>23||level<0) {
 				JOptionPane.showMessageDialog( this, "ERROR, worng level input, please try again");
@@ -285,8 +306,16 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 		catch (Exception e) {
 			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
-			chooseLevel();
+			ExceptionOFGAME();
 		}
+
+	}
+	/*************************************************************************************************
+	 This private method is works only if there is some Exception, and this method allows to the user 
+	 start the again with new GUI all the GUI will be new and let the user play again	
+	 *************************************************************************************************/
+	private void ExceptionOFGAME() {
+		chooseLevel();
 	}
 	//*************************************************************************************************
 
@@ -325,11 +354,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 	}
 
-
 	//************************************** Contractor **************************************
-	/**
-	 * the game will ask the user insert a level until he will put a correct number : 0-23
-	 */
+
 	public MyGameGUI() {
 		StdDraw.setCanvasSize(1200, 640);
 		chooseLevel();
@@ -357,8 +383,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				Thread.sleep(100);
 			}
 		}
-		catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		catch (InterruptedException e) {e.printStackTrace();}
 	}
 }//end of the class
