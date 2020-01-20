@@ -133,7 +133,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
 						+ "apple.png", 0.0012, 0.0012);
 			}
-
 		}
 	} 
 
@@ -157,7 +156,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 	private void drawTime() {
 		String timeToEnd=String.valueOf(this.game.timeToEnd()/1000);
-		StdDraw.text(35.0004, 32.0002, timeToEnd);
+		StdDraw.setPenColor(Color.GRAY);
+		StdDraw.setFont(new Font("Allegro", Font.HANGING_BASELINE, 20));
+		StdDraw.text(35.20123001129944, 32.10820000084034,  "The time to end of the game "+timeToEnd);
+		//StdDraw.text(toTimeLocation.get_min(), toTimeLocation.get_max(), "The time to end of the game"+timeToEnd);
 	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
@@ -195,7 +197,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		return middle;
 	}
 
-
 	//********************************************manually game method************************************
 
 	/**
@@ -220,14 +221,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			}
 		}
 		drawRobbots();
-		manuallyGame();
+		manuallyGame(gg);
 	} 
 
 	/**
 	 * this method is activate the manually game with all the drawing mehtods and the thread, 
 	 * and in the end it print out the scores of all the robots
 	 */
-	private void manuallyGame() {
+	private void manuallyGame(DGraph gg) {
 		try {
 			List<String> robotoss=this.game.getRobots();
 			Thread tt=new Thread(this);
@@ -306,6 +307,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
+		//int s=0;
 		while(this.game.isRunning()) {
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
@@ -333,10 +335,13 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					}
 				}//end of the for of fruits
 				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
-				Iterator<node_data> path_it=THEPATH.iterator();
-				while(path_it.hasNext()) {
-					this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
-					this.game.move();
+				if(THEPATH!=null) {
+					Iterator<node_data> path_it=THEPATH.iterator();
+					while(path_it.hasNext()) {
+						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
+						this.game.move();
+					}
+					//s++;
 				}
 			}
 		}//end of the while loop
