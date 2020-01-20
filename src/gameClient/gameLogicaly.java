@@ -147,7 +147,7 @@ public class gameLogicaly {
 	}
 	
 	/********************************************************************************************************
-	 * this method guts the poind and look for the vertex at this point location, if it not exist the method
+	 * this method guts the point and look for the vertex at this point location, if it not exist the method
 	 * returns -1
 	 * @return
 	 ********************************************************************************************************/

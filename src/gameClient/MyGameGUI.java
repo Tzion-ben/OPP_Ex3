@@ -299,9 +299,13 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private void automaticallyGame(DGraph gg) {
 		List <String> rr=this.game.getRobots();
 		List <String> ff=this.game.getFruits();
-
+		Thread tt=new Thread(this);
+		this.game.startGame();
+		tt.start();
 		while(this.game.isRunning()) {
-			for(int i=1;i<=rr.size();i++) {
+			rr=this.game.getRobots();
+			ff=this.game.getFruits();
+			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
 				double theBestPathDist=Double.MAX_VALUE;
 				int theBestDestId=-1;
@@ -317,9 +321,24 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						theBestDestId=destFruit;
 					}
 				}//end of the for of fruits
-				this.game.chooseNextEdge(rtemp.getId(), );
+				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
+				Iterator<node_data> path_it=THEPATH.iterator();
+				while(path_it.hasNext()) {
+					this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
+					this.game.move();
+				}
 			}
-
+		}//end of the while loop
+		//**********iterator to print the score of all the robots after the game
+		List<String> robotosAfter=this.game.getRobots();
+		Iterator<String> r_after=robotosAfter.iterator();
+		int iRun=1;
+		while(r_after.hasNext()) {
+			robbot rrr= new robbot(r_after.next());
+			try {
+				Thread.sleep(1000);}
+			catch (InterruptedException e) {e.printStackTrace();}
+			JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 		}
 	}
 	//********************************************Game choosers********************************************
