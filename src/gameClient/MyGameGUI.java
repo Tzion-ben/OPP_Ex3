@@ -5,6 +5,7 @@ import java.awt.Component;
 import java.awt.Dialog;
 import java.awt.FileDialog;
 import java.awt.Font;
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -189,8 +190,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		//middle of x and middle of y scales to draw the picture of the map
 		return middle;
 	}
-	
-	
+
+
 	//********************************************manually game method************************************
 
 	/**
@@ -262,7 +263,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 	//****************************************automatically game method************************************
 	/**
-	 * the automatically game manger , puts the first robots at the chosen vertices with the logicalt algorithem
+	 * the automatically game manger , puts the first robots at the chosen vertices with the logical algorithm
 	 * at the gameLogicaly class
 	 * and send them to draw the robots and activate the manually Game
 	 */
@@ -287,17 +288,39 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					this.game.addRobot(tt);
 			}
 		}
-
 		drawRobbots();
-		automaticallyGame();
+		automaticallyGame(gg);
 	}
 
 	/**
 	 * this method is activate the automatically game with all the drawing methods and the thread, 
 	 * and in the end it print out the scores of all the robots
 	 */
-	private void automaticallyGame() {
+	private void automaticallyGame(DGraph gg) {
+		List <String> rr=this.game.getRobots();
+		List <String> ff=this.game.getFruits();
 
+		while(this.game.isRunning()) {
+			for(int i=1;i<=rr.size();i++) {
+				robbot rtemp=new robbot(rr.get(i));
+				double theBestPathDist=Double.MAX_VALUE;
+				int theBestDestId=-1;
+				int srcOFrobot=rtemp.getSrc();
+				//take the every robot and runs on all the fruits
+				for(int j=0;j<ff.size();j++) {
+					fruit ffTemp=new fruit(ff.get(j));
+					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
+					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
+					//****the shortedtdist from the robot to fruit
+					if(tempPathDist<theBestPathDist) {
+						theBestPathDist=tempPathDist;
+						theBestDestId=destFruit;
+					}
+				}//end of the for of fruits
+				this.game.chooseNextEdge(rtemp.getId(), );
+			}
+
+		}
 	}
 	//********************************************Game choosers********************************************
 
@@ -349,7 +372,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
 			ExceptionOFGAME();
 		}
-
 	}
 	/*************************************************************************************************
 	 This private method is works only if there is some Exception, and this method allows to the user 
