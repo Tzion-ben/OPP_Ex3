@@ -113,7 +113,7 @@ public class gameLogicaly {
 				double destanceEFS2 =destEPoint.distance2D(pF);
 				String destanceEFS2To4Digits=new DecimalFormat("0.0000").format(destanceEFS2);
 				double destanceEFS2After=Double.parseDouble(destanceEFS2To4Digits);
-				if((destanceEFS1After+destanceEFS2After)<=destanceEAfter) 
+				if((destanceEFS1After+destanceEFS2After)==destanceEAfter) 
 					destff=destE;
 			}
 		}

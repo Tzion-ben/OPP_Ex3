@@ -307,33 +307,37 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
-		//int s=0;
+		int s=0;
 		while(this.game.isRunning()) {
+			//while(s<300) {
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
-				double theBestPathDist=Double.MAX_VALUE;
-				int theBestDestId=-1;
+				double theBestPathDist=Integer.MAX_VALUE;
+				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
+				//if(ff.size()>1) {
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
 					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
 					//****the shortedtdist from the robot to fruit
 					if(tempPathDist!=-1) {
+						//long ttrrrrrrr=this.game.timeToEnd()/1000;
 						if((tempPathDist<theBestPathDist)&&(this.game.timeToEnd()/1000!=0)) {
 							theBestPathDist=tempPathDist;
 							theBestDestId=destFruit;
 						}
 					}
-					if(this.game.timeToEnd()/1000==0) {
-						StdDraw.clear();
-						JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
-						this.game.stopGame();
-					}
 				}//end of the for of fruits
+				//}
+				if(this.game.timeToEnd()/1000==0) {
+					StdDraw.clear();
+					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
+					this.game.stopGame();
+				}
 				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
 				if(THEPATH!=null) {
 					Iterator<node_data> path_it=THEPATH.iterator();
@@ -341,7 +345,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						this.game.move();
 					}
-					//s++;
+					s++;
 				}
 			}
 		}//end of the while loop
@@ -471,10 +475,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	public void run() {  
 		try {
 			while(this.game.timeToEnd()/1000!=0) {
-				this.game.move();
+				//this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
-				System.out.println(this.game.timeToEnd()/1000);
 				GraphInit();
 				drawFruit();
 				drawRobbots();
