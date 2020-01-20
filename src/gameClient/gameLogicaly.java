@@ -129,10 +129,11 @@ public class gameLogicaly {
 	public double theBestWayToFruitDist (int srcV,int destV,DGraph gg) {
 		double toReturn=-1;
 		Graph_Algo ggALGO=new Graph_Algo(gg);
-		toReturn=ggALGO.shortestPathDist(srcV, destV);		
+		if(srcV!=destV)
+			toReturn=ggALGO.shortestPathDist(srcV, destV);		
 		return toReturn;
 	}
-	
+
 	/*******************************************************************************************************
 	 * this method return the shortest path from the robot to the fruit
 	 * @param srcV
@@ -145,7 +146,7 @@ public class gameLogicaly {
 		List <node_data> ansPath=ggALGO.shortestPath(srcV, destV);	
 		return ansPath;
 	}
-	
+
 	/********************************************************************************************************
 	 * this method guts the point and look for the vertex at this point location, if it not exist the method
 	 * returns -1

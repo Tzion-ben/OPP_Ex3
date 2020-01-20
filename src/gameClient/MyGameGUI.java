@@ -155,6 +155,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
+	private void drawTime() {
+		String timeToEnd=String.valueOf(this.game.timeToEnd()/1000);
+		StdDraw.text(35.0004, 32.0002, timeToEnd);
+	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -316,9 +320,16 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
 					//****the shortedtdist from the robot to fruit
-					if(tempPathDist<theBestPathDist) {
-						theBestPathDist=tempPathDist;
-						theBestDestId=destFruit;
+					if(tempPathDist!=-1) {
+						if((tempPathDist<theBestPathDist)&&(this.game.timeToEnd()/1000!=0)) {
+							theBestPathDist=tempPathDist;
+							theBestDestId=destFruit;
+						}
+					}
+					if(this.game.timeToEnd()/1000==0) {
+						StdDraw.clear();
+						JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
+						this.game.stopGame();
 					}
 				}//end of the for of fruits
 				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
@@ -364,7 +375,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				automaticallyGameManger(gg);
 		}
 		catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
+			//JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
+			System.out.println(e.getStackTrace().toString());
 			ExceptionOFGAME();
 		}
 	}
@@ -457,9 +469,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
+				System.out.println(this.game.timeToEnd()/1000);
 				GraphInit();
 				drawFruit();
 				drawRobbots();
+				drawTime();
 				StdDraw.disableDoubleBuffering();
 				StdDraw.show();
 				Thread.sleep(100);
