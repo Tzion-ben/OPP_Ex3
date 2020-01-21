@@ -2,6 +2,7 @@ package gameClient;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -291,28 +292,29 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		List <String> ff=this.game.getFruits();
 
 		ArrayList<String> PlaceMarks=new ArrayList<String>();
+		ArrayList<String> icons=new ArrayList<String>();
+		setIcons(icons);
+		setPalceMarks(PlaceMarks);
 
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
+
+		double iTimeRun=0;
+		double toCheck=0;
+
 		while(this.game.isRunning()) {
+			iTimeRun=this.game.timeToEnd()/1000;
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
-				String ttPlaceMark=this.newFileKMLforGame.placeMark(rtemp.getIconName(), rtemp.getlocation());
-				PlaceMarks.add(ttPlaceMark);
-
 				double theBestPathDist=Integer.MAX_VALUE;
 				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
-					ffTemp.setIconID(j);
-					String ffPlaceMark=this.newFileKMLforGame.placeMark(ffTemp.getIconName()+
-							ffTemp.getIconID(), rtemp.getlocation());
-					PlaceMarks.add(ttPlaceMark);
 					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
 					//****the shortedtdist from the robot to fruit
@@ -336,10 +338,19 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						this.game.move();
 					}
+
 				}
 			}
+			try {
+				Thread.sleep(250);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+				setPalceMarks(PlaceMarks);
 		}//end of the while loop
 		//**********iterator to print the score of all the robots after the game
+
 		List<String> robotosAfter=this.game.getRobots();
 		Iterator<String> r_after=robotosAfter.iterator();
 		int iRun=1;
@@ -350,35 +361,70 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			catch (InterruptedException e) {e.printStackTrace();}
 			JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 		}
+
+		//setPalceMarks(PlaceMarks);
+
+
+		try {
+			initKMLfile(icons, PlaceMarks, this.level);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+
+	/******************************************************************************************************
+	 * 
+	 *****************************************************************************************************/
+	public void setPalceMarks (ArrayList<String> PlaceMarks) {
+		List <String> rr=this.game.getRobots();
+		List <String> ff=this.game.getFruits();
+
+		//loop for the position of the robots
+		for(int i=0;i<rr.size();i++) {
+			robbot roTemp=new robbot(rr.get(i));
+			String ttPlaceMark=this.newFileKMLforGame.placeMark(roTemp.getIconName(), roTemp.getlocation());
+			PlaceMarks.add(ttPlaceMark);
+		}//end for loop
+
+		//loop for the position of the fruits
+		for(int i=0;i<ff.size();i++) {
+			fruit ffTemp=new fruit(ff.get(i));
+			ffTemp.setIconID(i);
+			ffTemp.setIconName(i);
+			String ffPlaceMark=this.newFileKMLforGame.placeMark(ffTemp.getIconName(), ffTemp.getlocation());
+			PlaceMarks.add(ffPlaceMark); 
+		}//end for loop
 	}
 
 	/***************************************************************************************************
-	 * this method create all the icons of the robots and the fruit for the KML file
+	 * this method create all the icons of the robots and the fruit for the KML file and sets the 
+	 * fruit id that will be used at the KML file
 	 ***************************************************************************************************/
-	private void setIcons() {
+	private void setIcons(ArrayList<String> icons) {
 		List <String> rr=this.game.getRobots();
 		List <String> ff=this.game.getFruits();
 		Iterator<String> rr_it=rr.iterator();
 		Iterator<String> ff_it=ff.iterator();
 
-		ArrayList<String> icons=new ArrayList<String>();
 		while(rr_it.hasNext()){
 			robbot rtemp=new robbot(rr_it.next());
 			String iconRR=this.newFileKMLforGame.createIconStyle(rtemp.getIconName(), rtemp.getIconAddress());
 			icons.add(iconRR);
 		}//*************finished add all the robots to the icon list 
-		
+
 		int iRunff=0;
 		while(ff_it.hasNext()) {
 			fruit ftemp=new fruit(ff_it.next());
 			ftemp.setIconID(iRunff);
 			ftemp.setIconName(iRunff);
-			
+
 			String iconFF=this.newFileKMLforGame.createIconStyle(ftemp.getIconName(), ftemp.getIconAddress());
 			icons.add(iconFF);
 			iRunff++;
 		}
 	}
+
 	//********************************************Game choosers********************************************
 
 	/**
@@ -409,7 +455,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	/**
-	 * this mathod is let to the user to choose the level of the game that he want
+	 * this method is let to the user to choose the level of the game that he want
 	 * to play
 	 */
 	private void chooseLevel() {
@@ -424,6 +470,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				level=Integer.parseInt(scenario_num);
 			}
 			this.game=Game_Server.getServer(level);
+			this.level=level;
 			GraphInit();
 		}
 		catch (Exception e) {
@@ -495,6 +542,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private game_service game;
 	private gameLogicaly logicHelp=new gameLogicaly();
 	KML_Logger newFileKMLforGame=new KML_Logger();
+	private int level;
 	//**********************************************************************************************************
 
 	/*******************************the Thread run method ******************************************************

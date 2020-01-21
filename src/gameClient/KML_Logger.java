@@ -18,14 +18,15 @@ public class KML_Logger {
 	 * @return String that represent icon
 	 **************************************************************************************************/
 	public String createIconStyle(String name,String adress) {
-		String Icon="<Style id="+name+">\r\n" + 
+		char Apostrophes=34;
+		String Icon="<Style id="+Apostrophes+name+Apostrophes+">\r\n" + 
 				"      <IconStyle>\r\n" + 
 				"        <Icon>\r\n" + 
 				"          <href>"+adress+"</href>\r\n" + 
 				"        </Icon>\r\n" + 
 				"        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\r\n" + 
 				"      </IconStyle>\r\n" + 
-				"    </Style>";
+				"    </Style>\r\n";
 
 		return Icon;
 	}
@@ -45,9 +46,9 @@ public class KML_Logger {
 				"      </TimeStamp>\r\n" + 
 				"      <styleUrl>#"+nameIcon+"</styleUrl>\r\n" + 
 				"      <Point>\r\n" + 
-				"        <coordinates>"+Location.y()+Location.x()+"</coordinates>\r\n" + 
+				"        <coordinates>"+Location.x()+","+Location.y()+"</coordinates>\r\n" + 
 				"      </Point>\r\n" + 
-				"    </Placemark>";
+				"    </Placemark>\r\n";
 
 		return placemark;
 	}
@@ -69,23 +70,19 @@ public class KML_Logger {
 			KMLline.append(start);
 
 			//***********icons to the file
-			String iconss="";
 			Iterator<String> allIcons=icons.iterator();	
 			while(allIcons.hasNext()) {
 				String ii=allIcons.next();
-				iconss+=ii+"\r\n";
-				KMLline.append(iconss);
-				printKMLfile.write(KMLline.toString());
+				KMLline.append(ii);
+				//printKMLfile.write(KMLline.toString());
 			}
 
 			//***********all the placemarks to the file
-			String fileBody="";
 			Iterator<String> allPlaces=placeMarks.iterator();	
 			while(allPlaces.hasNext()) {
 				String tt=allPlaces.next();
-				fileBody+=tt+"\r\n";
-				KMLline.append(fileBody);
-				printKMLfile.write(KMLline.toString());
+				KMLline.append(tt);
+				//printKMLfile.write(KMLline.toString());
 			}
 
 			//***********end of the KML file 
@@ -93,6 +90,7 @@ public class KML_Logger {
 					"</kml>";
 			KMLline.append(end);
 			printKMLfile.write(KMLline.toString());
+			printKMLfile.close();
 		} 
 		catch (FileNotFoundException e) {e.printStackTrace();}
 	}
