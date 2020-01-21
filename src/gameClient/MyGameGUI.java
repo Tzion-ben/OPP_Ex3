@@ -1,40 +1,23 @@
 package gameClient;
 
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dialog;
-import java.awt.FileDialog;
 import java.awt.Font;
-import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-
-import javax.swing.AbstractButton;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.sun.source.tree.Tree;
-
 import Server.Game_Server;
 import Server.game_service;
-import algorithems.Graph_Algo;
 import dataStructure.*;
-import oop_dataStructure.oop_graph;
 import utils.*;
-
+import java.security.Timestamp;
+import java.time.LocalDateTime;
 public class MyGameGUI extends JFrame implements ActionListener, MouseListener, Runnable {
 
 	/**
@@ -44,11 +27,13 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		String gameDitales=this.game.toString();
 		gameServerString gamePlayNow=new gameServerString(gameDitales);
 		try {
+			LocalDateTime tt=LocalDateTime.now();
+			System.out.println("The time is : "+tt);
 			String allPicData=gamePlayNow.getgraphId();
 			String [] justName=allPicData.split("/");
 			String fullName=justName[1];
 			String allPath
-			="C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\data\\"+fullName+".png";		
+			="data\\"+fullName+".png";		
 			StdDraw.picture(pp.x(), pp.y(), allPath);
 		}catch (Exception e){e.getStackTrace();}
 	}
@@ -64,6 +49,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gg.init(g);
 		drawNodes(gg);
 		drawEdges(gg);
+		
 		if(!game.isRunning())
 			chooserGame(gg);
 	}
@@ -125,12 +111,12 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 				StdDraw.setPenColor(Color.red);
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
-				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+				StdDraw.picture(pF1.x(), pF1.y(), "icons\\"
 						+ "banana.png", 0.0012, 0.0012);
 			}
 			else if(f1.getType()==1) {
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
-				StdDraw.picture(pF1.x(), pF1.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+				StdDraw.picture(pF1.x(), pF1.y(), "icons\\"
 						+ "apple.png", 0.0012, 0.0012);
 			}
 		}
@@ -148,7 +134,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			Point3D ppRob=new Point3D(rr.getlocation());
 			StdDraw.setPenColor(Color.red);
 			StdDraw.text(ppRob.x()+0.0004, ppRob.y()+0.0002, "Robot "+iRun);
-			StdDraw.picture(ppRob.x(), ppRob.y(), "C:\\Users\\tzion\\Desktop\\java Progects\\Ex3_v2\\icons\\"
+			StdDraw.picture(ppRob.x(), ppRob.y(), "icons\\"
 					+ "robot.jpg", 0.0012, 0.0012);
 			iRun++;
 		}
