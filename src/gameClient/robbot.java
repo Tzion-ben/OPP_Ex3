@@ -37,8 +37,16 @@ public class robbot {
 	public Point3D getlocation() {
 		return this.location;
 	}
+	
+	public String getIconName() {
+		return this.iconName;
+	}
+	
+	public String getIconAddress() {
+		return this.iconAddress;
+	}
 	//end getters
-
+	
 	private  void setFromJson(String str) {		
 		try {
 			JSONObject line = new JSONObject(str);;
@@ -56,9 +64,13 @@ public class robbot {
 			this.dest=destt;
 			this.speed=speedd;
 			this.location=tempLocation;
+			this.iconName="robot num "+idd;
+			this.iconAddress="https://img.icons8.com/carbon-copy/100/000000/broken-robot.png";
 		}//end try
 		catch (JSONException e) {e.printStackTrace();}	
 	}
+	
+	
 
 	//********************private fields***********************
 	private int id;
@@ -67,4 +79,6 @@ public class robbot {
 	private int dest;
 	private int speed;
 	private Point3D location;
+	private String iconName;
+	private String iconAddress;
 }

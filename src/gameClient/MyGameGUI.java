@@ -15,8 +15,6 @@ import java.util.Iterator;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
-import Ex1.function;
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.*;
@@ -291,23 +289,30 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private void automaticallyGame(DGraph gg) {
 		List <String> rr=this.game.getRobots();
 		List <String> ff=this.game.getFruits();
+
+		ArrayList<String> PlaceMarks=new ArrayList<String>();
+
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
-		int s=0;
 		while(this.game.isRunning()) {
-			//while(s<300) {
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
+				String ttPlaceMark=this.newFileKMLforGame.placeMark(rtemp.getIconName(), rtemp.getlocation());
+				PlaceMarks.add(ttPlaceMark);
+
 				double theBestPathDist=Integer.MAX_VALUE;
 				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
-				//if(ff.size()>1) {
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
+					ffTemp.setIconID(j);
+					String ffPlaceMark=this.newFileKMLforGame.placeMark(ffTemp.getIconName()+
+							ffTemp.getIconID(), rtemp.getlocation());
+					PlaceMarks.add(ttPlaceMark);
 					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
 					//****the shortedtdist from the robot to fruit
@@ -319,7 +324,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						}
 					}
 				}//end of the for of fruits
-				//}
 				if(this.game.timeToEnd()/1000==0) {
 					StdDraw.clear();
 					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
@@ -332,7 +336,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						this.game.move();
 					}
-					s++;
 				}
 			}
 		}//end of the while loop
@@ -346,6 +349,34 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				Thread.sleep(1000);}
 			catch (InterruptedException e) {e.printStackTrace();}
 			JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
+		}
+	}
+
+	/***************************************************************************************************
+	 * this method create all the icons of the robots and the fruit for the KML file
+	 ***************************************************************************************************/
+	private void setIcons() {
+		List <String> rr=this.game.getRobots();
+		List <String> ff=this.game.getFruits();
+		Iterator<String> rr_it=rr.iterator();
+		Iterator<String> ff_it=ff.iterator();
+
+		ArrayList<String> icons=new ArrayList<String>();
+		while(rr_it.hasNext()){
+			robbot rtemp=new robbot(rr_it.next());
+			String iconRR=this.newFileKMLforGame.createIconStyle(rtemp.getIconName(), rtemp.getIconAddress());
+			icons.add(iconRR);
+		}//*************finished add all the robots to the icon list 
+		
+		int iRunff=0;
+		while(ff_it.hasNext()) {
+			fruit ftemp=new fruit(ff_it.next());
+			ftemp.setIconID(iRunff);
+			ftemp.setIconName(iRunff);
+			
+			String iconFF=this.newFileKMLforGame.createIconStyle(ftemp.getIconName(), ftemp.getIconAddress());
+			icons.add(iconFF);
+			iRunff++;
 		}
 	}
 	//********************************************Game choosers********************************************
@@ -400,7 +431,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			ExceptionOFGAME();
 		}
 	}
-	
+
 	/**************************************************************************************************
 	 * 
 	 * @param file
@@ -408,20 +439,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 **************************************************************************************************/
 	private void initKMLfile (ArrayList<String> icons,ArrayList<String> placeMarks, int level)
 			throws IOException {
-		
-		KML_Logger newFile=new KML_Logger();
-		String theFile=newFile.alltDoc(icons, placeMarks, level);
-		
-		String file = level+".kml";
-		FileWriter toKmlGame = new FileWriter(file);  
-		PrintWriter outPutFunctions = new PrintWriter(toKmlGame);
-		Iterator<function> func=this.functionsList.listIterator(); ;
-		while(func.hasNext()) 
-			outPutFunctions.println(func.next());
-		outPutFunctions.close();
-		functions.close();
-		
-		
+		String fileKML = level+".kml";
+		this.newFileKMLforGame.alltDoc(icons, placeMarks, level,fileKML);
 	}
 	/*************************************************************************************************
 	 This private method is works only if there is some Exception, and this method allows to the user 
@@ -475,6 +494,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	//************************************** private field **************************************
 	private game_service game;
 	private gameLogicaly logicHelp=new gameLogicaly();
+	KML_Logger newFileKMLforGame=new KML_Logger();
 	//**********************************************************************************************************
 
 	/*******************************the Thread run method ******************************************************

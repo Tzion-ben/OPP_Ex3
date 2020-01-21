@@ -31,8 +31,31 @@ public class fruit {
 	public Point3D getlocation() {
 		return this.location;
 	}
+	
+	public String getIconName() {
+		return this.iconName;
+	}
+	
+	public String getIconAddress() {
+		return this.iconAddress;
+	}
+	
+	public int getIconID() {
+		return this.iconID;
+	}
 	//end getters
-
+	
+	//set only for the icon id to KML file
+	public void setIconID(int iconID) {
+		this.iconID=iconID;
+	}
+	
+	public void setIconName(int ID) {
+		String fullName="fruit num "+ID;
+		this.iconName=fullName;
+	}
+	//end of the set
+	
 	private  void setFromJson(String str) {		
 		try {
 			JSONObject line = new JSONObject(str);;
@@ -43,6 +66,9 @@ public class fruit {
 			this.value=val;
 			this.type=ty;
 			this.location=tempLocation;
+			this.iconName=null;
+			this.iconAddress="https://img.icons8.com/carbon-copy/100/000000/broken-robot.png";
+			this.iconID=-100;
 		}//end try
 		catch (JSONException e) {e.printStackTrace();}	
 	}
@@ -51,4 +77,7 @@ public class fruit {
 	private double value;
 	private int type;
 	private Point3D location;
+	private String iconName;
+	private String iconAddress;
+	private int iconID;
 }
