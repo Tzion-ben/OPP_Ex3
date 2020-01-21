@@ -16,8 +16,6 @@ import Server.Game_Server;
 import Server.game_service;
 import dataStructure.*;
 import utils.*;
-import java.security.Timestamp;
-import java.time.LocalDateTime;
 public class MyGameGUI extends JFrame implements ActionListener, MouseListener, Runnable {
 
 	/**
@@ -27,8 +25,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		String gameDitales=this.game.toString();
 		gameServerString gamePlayNow=new gameServerString(gameDitales);
 		try {
-			LocalDateTime tt=LocalDateTime.now();
-			System.out.println("The time is : "+tt);
 			String allPicData=gamePlayNow.getgraphId();
 			String [] justName=allPicData.split("/");
 			String fullName=justName[1];
@@ -49,7 +45,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gg.init(g);
 		drawNodes(gg);
 		drawEdges(gg);
-		
+
 		if(!game.isRunning())
 			chooserGame(gg);
 	}

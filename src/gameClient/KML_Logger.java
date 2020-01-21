@@ -1,21 +1,18 @@
 package gameClient;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import utils.Point3D;
 
 public class KML_Logger {
 
-	private void setIcon(int countIcon) {
-
-	}
-
-	private void createIconStyle() {
-		String format="";
-		String Icon="<Style id=\"paddle-a\">\r\n" + 
+	public void createIconStyle(String name,String adress) {
+		String Icon="<Style id="+name+">\r\n" + 
 				"      <IconStyle>\r\n" + 
 				"        <Icon>\r\n" + 
-				"          <href>http://maps.google.com/mapfiles/kml/paddle/A."+format+"</href>\r\n" + 
+				"          <href>"+adress+"</href>\r\n" + 
 				"        </Icon>\r\n" + 
 				"        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\r\n" + 
 				"      </IconStyle>\r\n" + 
@@ -37,43 +34,51 @@ public class KML_Logger {
 				"      </TimeStamp>\r\n" + 
 				"      <styleUrl>#"+nameIcon+"</styleUrl>\r\n" + 
 				"      <Point>\r\n" + 
-				"        <coordinates>"+Location.iy()+Location.ix()+"</coordinates>\r\n" + 
+				"        <coordinates>"+Location.y()+Location.x()+"</coordinates>\r\n" + 
 				"      </Point>\r\n" + 
 				"    </Placemark>";
 
 		return placemark;
 	}
 
+	/****************************************************************************************************
 	/**
-	 * 
-	 * @return
-	 */
-	private String mergeAll () {
-
-	}
-
-	/**
-	 * this method create the document name and the sings of the XML at the start of the document
-	 */
-	public String allDoc(int level) {
-		String theKMLDoc=level+".kml";
-		String name="";
-		String end=" </Document>\r\n" + 
-				"</kml>";
-		String all="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
+	 * this method guts all the placemarks and create a KML file with all the icons and the placemarks
+	 ****************************************************************************************************/
+	public String alltDoc(ArrayList<String> icons, ArrayList<String> paleceMarks,int level) {
+		String theKMLDoc="";
+		String name ="KML file of level number "+level;
+		String start="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
 				"<kml xmlns=\"http://earth.google.com/kml/2.2\">\r\n" + 
 				"  <Document>\r\n" + 
-				"    <name>"+name+"</name>\r\n"
-				+mergeAll()+"\r\n"+end;
+				"    <name>"+name+"</name>\r\n";
 
-		retrun theKMLDoc;		
+		String iconss="";
+		Iterator<String> allIcons=icons.iterator();	
+		while(allIcons.hasNext()) {
+			String ii=allIcons.next();
+			
+		}
+
+
+
+		String fileBody="";
+		Iterator<String> allPlaces=paleceMarks.iterator();	
+		while(allPlaces.hasNext()) {
+			String tt=allPlaces.next();
+			fileBody+=tt+"\r\n";
+
+		}
+
+		String end=" </Document>\r\n" + 
+				"</kml>";
+
+		theKMLDoc=start+fileBody+end;
+		return theKMLDoc;		
 	}
-
 
 	/****************************************************************************************************
-	 *contractor for the create KML file
+	 ********************************contractor for the create KML file**********************************
 	 ***************************************************************************************************/
-	public KML_Logger(int level) {
-		String ans=allDoc(level);
-	}
-}
+	public KML_Logger() {;}
+}//end of the class
