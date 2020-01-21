@@ -6,12 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
+import Ex1.function;
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.*;
@@ -394,6 +399,29 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
 			ExceptionOFGAME();
 		}
+	}
+	
+	/**************************************************************************************************
+	 * 
+	 * @param file
+	 * @throws IOException
+	 **************************************************************************************************/
+	private void initKMLfile (ArrayList<String> icons,ArrayList<String> placeMarks, int level)
+			throws IOException {
+		
+		KML_Logger newFile=new KML_Logger();
+		String theFile=newFile.alltDoc(icons, placeMarks, level);
+		
+		String file = level+".kml";
+		FileWriter toKmlGame = new FileWriter(file);  
+		PrintWriter outPutFunctions = new PrintWriter(toKmlGame);
+		Iterator<function> func=this.functionsList.listIterator(); ;
+		while(func.hasNext()) 
+			outPutFunctions.println(func.next());
+		outPutFunctions.close();
+		functions.close();
+		
+		
 	}
 	/*************************************************************************************************
 	 This private method is works only if there is some Exception, and this method allows to the user 

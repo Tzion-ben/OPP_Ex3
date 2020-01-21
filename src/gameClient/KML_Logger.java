@@ -1,5 +1,8 @@
 package gameClient;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,7 +11,13 @@ import utils.Point3D;
 
 public class KML_Logger {
 
-	public void createIconStyle(String name,String adress) {
+	/***************************************************************************************************
+	 * that method create a KML format string from a icon details
+	 * @param name
+	 * @param adress
+	 * @return String that represent icon
+	 **************************************************************************************************/
+	public String createIconStyle(String name,String adress) {
 		String Icon="<Style id="+name+">\r\n" + 
 				"      <IconStyle>\r\n" + 
 				"        <Icon>\r\n" + 
@@ -17,14 +26,16 @@ public class KML_Logger {
 				"        <hotSpot x=\"32\" y=\"1\" xunits=\"pixels\" yunits=\"pixels\"/>\r\n" + 
 				"      </IconStyle>\r\n" + 
 				"    </Style>";
+
+		return Icon;
 	}
 
 	/**************************************************************************************************
-	 * this method returns a string that represent the placemark to the KML file for a givin icon and 
+	 * this method returns a string that represent the placemark to the KML file for a giving icon and 
 	 * his location
 	 * @param nameIcon
 	 * @param Location
-	 * @return string that represent the placemark to the KML file
+	 * @return string that represent the placemark for a KML file
 	 *************************************************************************************************/
 	public String placeMark(String nameIcon,Point3D Location) {
 		LocalTime timeNow=LocalTime.now();
@@ -43,38 +54,47 @@ public class KML_Logger {
 
 	/****************************************************************************************************
 	/**
-	 * this method guts all the placemarks and create a KML file with all the icons and the placemarks
+	 * this method guts all the details to KML file and create a KML file from them
 	 ****************************************************************************************************/
-	public String alltDoc(ArrayList<String> icons, ArrayList<String> paleceMarks,int level) {
-		String theKMLDoc="";
-		String name ="KML file of level number "+level;
-		String start="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
-				"<kml xmlns=\"http://earth.google.com/kml/2.2\">\r\n" + 
-				"  <Document>\r\n" + 
-				"    <name>"+name+"</name>\r\n";
+	public void alltDoc(ArrayList<String> icons, ArrayList<String> placeMarks,int level,String file_name) {
+		try {
+			PrintWriter printKMLfile = new PrintWriter(new File(file_name));
+			StringBuilder KMLline = new StringBuilder();
 
-		String iconss="";
-		Iterator<String> allIcons=icons.iterator();	
-		while(allIcons.hasNext()) {
-			String ii=allIcons.next();
-			
-		}
+			String name ="KML file of level number "+level;
+			String start="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
+					"<kml xmlns=\"http://earth.google.com/kml/2.2\">\r\n" + 
+					"  <Document>\r\n" + 
+					"    <name>"+name+"</name>\r\n";
+			KMLline.append(start);
 
+			//***********icons to the file
+			String iconss="";
+			Iterator<String> allIcons=icons.iterator();	
+			while(allIcons.hasNext()) {
+				String ii=allIcons.next();
+				iconss+=ii+"\r\n";
+				KMLline.append(iconss);
+				printKMLfile.write(KMLline.toString());
+			}
 
+			//***********all the placemarks to the file
+			String fileBody="";
+			Iterator<String> allPlaces=placeMarks.iterator();	
+			while(allPlaces.hasNext()) {
+				String tt=allPlaces.next();
+				fileBody+=tt+"\r\n";
+				KMLline.append(fileBody);
+				printKMLfile.write(KMLline.toString());
+			}
 
-		String fileBody="";
-		Iterator<String> allPlaces=paleceMarks.iterator();	
-		while(allPlaces.hasNext()) {
-			String tt=allPlaces.next();
-			fileBody+=tt+"\r\n";
-
-		}
-
-		String end=" </Document>\r\n" + 
-				"</kml>";
-
-		theKMLDoc=start+fileBody+end;
-		return theKMLDoc;		
+			//***********end of the KML file 
+			String end=" </Document>\r\n" + 
+					"</kml>";
+			KMLline.append(end);
+			printKMLfile.write(KMLline.toString());
+		} 
+		catch (FileNotFoundException e) {e.printStackTrace();}
 	}
 
 	/****************************************************************************************************
