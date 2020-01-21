@@ -67,7 +67,7 @@ public class fruit {
 			this.type=ty;
 			this.location=tempLocation;
 			this.iconName=null;
-			this.iconAddress="https://img.icons8.com/carbon-copy/100/000000/broken-robot.png";
+			this.iconAddress="https://img.icons8.com/doodle/48/000000/orange--v1.png";
 			this.iconID=-100;
 		}//end try
 		catch (JSONException e) {e.printStackTrace();}	

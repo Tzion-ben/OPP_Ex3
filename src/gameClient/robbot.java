@@ -65,7 +65,7 @@ public class robbot {
 			this.speed=speedd;
 			this.location=tempLocation;
 			this.iconName="robot num "+idd;
-			this.iconAddress="https://img.icons8.com/carbon-copy/100/000000/broken-robot.png";
+			this.iconAddress="https://img.icons8.com/plasticine/100/000000/broken-robot.png";
 		}//end try
 		catch (JSONException e) {e.printStackTrace();}	
 	}

@@ -74,7 +74,6 @@ public class KML_Logger {
 			while(allIcons.hasNext()) {
 				String ii=allIcons.next();
 				KMLline.append(ii);
-				//printKMLfile.write(KMLline.toString());
 			}
 
 			//***********all the placemarks to the file
@@ -82,7 +81,6 @@ public class KML_Logger {
 			while(allPlaces.hasNext()) {
 				String tt=allPlaces.next();
 				KMLline.append(tt);
-				//printKMLfile.write(KMLline.toString());
 			}
 
 			//***********end of the KML file 

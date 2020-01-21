@@ -299,12 +299,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
-
-		double iTimeRun=0;
-		double toCheck=0;
-
 		while(this.game.isRunning()) {
-			iTimeRun=this.game.timeToEnd()/1000;
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
@@ -342,12 +337,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				}
 			}
 			try {
-				Thread.sleep(250);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				Thread.sleep(100);
 				setPalceMarks(PlaceMarks);
+			} catch (InterruptedException e) {e.printStackTrace();}
 		}//end of the while loop
 		//**********iterator to print the score of all the robots after the game
 
@@ -553,7 +545,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	public void run() {  
 		try {
 			while(this.game.timeToEnd()/1000!=0) {
-				//this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
 				GraphInit();
