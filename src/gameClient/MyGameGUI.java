@@ -314,7 +314,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
 					//****the shortedtdist from the robot to fruit
 					if(tempPathDist!=-1) {
-						//long ttrrrrrrr=this.game.timeToEnd()/1000;
 						if((tempPathDist<theBestPathDist)&&(this.game.timeToEnd()/1000!=0)) {
 							theBestPathDist=tempPathDist;
 							theBestDestId=destFruit;
@@ -478,7 +477,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 **************************************************************************************************/
 	private void initKMLfile (ArrayList<String> icons,ArrayList<String> placeMarks, int level)
 			throws IOException {
-		String fileKML = level+".kml";
+		String fileKML = "data\\"+level+".kml";
 		this.newFileKMLforGame.alltDoc(icons, placeMarks, level,fileKML);
 	}
 	/*************************************************************************************************
