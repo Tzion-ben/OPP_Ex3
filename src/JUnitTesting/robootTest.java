@@ -59,5 +59,4 @@ class robootTest {
 		Point3D expected=new Point3D(thePoint);
 		assertEquals(expected, rr.getlocation());
 	}
-
 }
