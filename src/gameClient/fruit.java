@@ -58,7 +58,7 @@ public class fruit {
 	
 	private  void setFromJson(String str) {		
 		try {
-			JSONObject line = new JSONObject(str);;
+			JSONObject line = new JSONObject(str);
 			JSONObject tt= line.getJSONObject("Fruit");
 			int val=tt.getInt("value");
 			int ty=tt.getInt("type");
