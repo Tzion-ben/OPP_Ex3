@@ -19,7 +19,6 @@ class fruitTest {
 	public static void beforeall() {
 		List<String> fruits=gameTest.getFruits();	
 		ff=new fruit(fruits.get(0));
-
 	}
 
 	@Test
