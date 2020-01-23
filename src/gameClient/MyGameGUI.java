@@ -145,7 +145,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	/**
-	 * this method draw the time on the screan
+	 * this method draw the time on the screen
 	 */
 	private void drawTime() {
 		String timeToEnd=String.valueOf(this.game.timeToEnd()/1000);
@@ -244,7 +244,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					this.game.stopGame();
 				}
 			}//end of the while loop
-			
+
 			//**********iterator to print the score of all the robots after the game
 			List<String> robotosAfter=this.game.getRobots();
 			Iterator<String> r_after=robotosAfter.iterator();
@@ -360,10 +360,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			catch (InterruptedException e) {e.printStackTrace();}
 			JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 		}
-
-		//setPalceMarks(PlaceMarks);
-
-
 		try {
 			initKMLfile(icons, PlaceMarks, this.level);
 		} catch (IOException e) {
@@ -373,7 +369,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	/******************************************************************************************************
-	 * 
+	 * this method make a samples of placemarks by KML_Logger class to create with the the KML file of the 
+	 * specific level
 	 *****************************************************************************************************/
 	public void setPalceMarks (ArrayList<String> PlaceMarks) {
 		List <String> rr=this.game.getRobots();
@@ -428,7 +425,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 	/**
 	 * this method is about to let the user decide if he want to play automatically or manually,have to write
-	 * 0 to automatically or 1 to manually, and if he put other number it will run again until he puts 0 o 1
+	 * 0 to automatically or 1 to manually, and if he put other number it will run again until he press 0 o 1
 	 */
 	private void chooserGame(DGraph gg) {
 		try {
@@ -453,10 +450,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
-	/**
+	/***************************************************************************************************************
 	 * this method is let to the user to choose the level of the game that he want
 	 * to play
-	 */
+	 ***************************************************************************************************************/
 	private void chooseLevel() {
 		int level=0;
 		String scenario_num="";
@@ -479,7 +476,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	/**************************************************************************************************
-	 * 
+	 * this method use the KML_Logger class to create the KML file with all the details that was collected
+	 * until now: it include all the placemarks and the  icons 
 	 * @param file
 	 * @throws IOException
 	 **************************************************************************************************/
@@ -489,8 +487,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		this.newFileKMLforGame.alltDoc(icons, placeMarks, level,fileKML);
 	}
 	/*************************************************************************************************
-	 This private method is works only if there is some Exception, and this method allows to the user 
-	 start the again with new GUI all the GUI will be new and let the user play again	
+	 * This private method is works only if there is some Exception, and this method allows to the user 
+	 * start the again with new GUI all the GUI will be new and let the user play again	
 	 *************************************************************************************************/
 	private void ExceptionOFGAME() {
 		chooseLevel();

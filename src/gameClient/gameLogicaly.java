@@ -1,6 +1,6 @@
 package gameClient;
 /**
- * this class is a help class to the gameGUI, this class include all the logically methods
+ * This class is a help class to the gameGUI, this class include all the logically methods
  * that help to calculate all the things for the manually and automatically games
  * @author tzion
  */
@@ -9,22 +9,21 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import Server.game_service;
 import dataStructure.DGraph;
 import dataStructure.edge_data;
 import dataStructure.node_data;
 import algorithems.*;
 import utils.Point3D;
-import utils.Range;
 
-//*******************************contractor *******************************
+//*******************************constructor *******************************
 public class gameLogicaly {
 	public gameLogicaly() {;}
 	//**************************************************************************
 	/***********************************************************************************************
 	 * this method guts the graph and the game at the specific level and calculate the place of the 
-	 * fruit on it for the automatically game
+	 * fruit on it for the automatically game, and returns arrayList with id's of src and the dest of the edge that
+	 * the fruit on it
 	 * @param gg
 	 * @param game
 	 * @return ArryList of all the closely vertexes to all the fruits
@@ -34,7 +33,7 @@ public class gameLogicaly {
 
 		Collection<node_data> vv=gg.getV();
 		Iterator<node_data> vv_iter=vv.iterator();
-
+		
 		List<String> fruitss=game.getFruits();
 		Iterator<String> f_iter=fruitss.iterator();
 		while(f_iter.hasNext()) {
@@ -117,7 +116,6 @@ public class gameLogicaly {
 				String allDistPlusString=new DecimalFormat("0.0000").format(allDistPlus);
 				double allDistPlus4Digits=Double.parseDouble(allDistPlusString);
 				if(allDistPlus4Digits==destanceEAfter)
-					//if((destanceEFS1After+destanceEFS2After)+0.000001==destanceEAfter) 
 					destff=destE;
 			}
 		}
@@ -140,11 +138,11 @@ public class gameLogicaly {
 	}
 
 	/*******************************************************************************************************
-	 * this method return the shortest path from the robot to the fruit
+	 * this method return the shortest path (List of Nodes) from the robot to the fruit
 	 * @param srcV
 	 * @param destV
 	 * @param gg
-	 * @return the shortest payh
+	 * @return the shortest path
 	 *******************************************************************************************************/
 	public List<node_data> theBestWayToFruit (int srcV,int destV,DGraph gg) {
 		Graph_Algo ggALGO=new Graph_Algo(gg);

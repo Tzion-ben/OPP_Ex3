@@ -15,7 +15,7 @@ import utils.Point3D;
 public class KML_Logger {
 
 	/***************************************************************************************************
-	 * that method create a KML format string from a icon details
+	 * this method create a KML format string from a icon details
 	 * @param name
 	 * @param adress
 	 * @return String that represent icon
