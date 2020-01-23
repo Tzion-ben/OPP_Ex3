@@ -200,6 +200,7 @@ public class DGraph implements graph{
 					while(vertN.hasNext()&&edgeT.hasNext()) {
 						edgeData tempEdge=(edgeData) edgeN.next();
 						if(!tempEdge.equals(edgeT.next())) 
+							
 							return false;
 					}
 				}

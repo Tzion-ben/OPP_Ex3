@@ -230,13 +230,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				int rrToMoveInt=Integer.parseInt(rrToMove)-1;
 				robbot rr=new robbot(robotoss.get(rrToMoveInt));
 				this.game.chooseNextEdge(rr.getId(), nextVV);
-
+				//this.game.move();
 				if(this.game.timeToEnd()/1000==0) {
 					StdDraw.clear();
 					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
 					this.game.stopGame();
 				}
 			}//end of the while loop
+			
 			//**********iterator to print the score of all the robots after the game
 			List<String> robotosAfter=this.game.getRobots();
 			Iterator<String> r_after=robotosAfter.iterator();
@@ -544,6 +545,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	public void run() {  
 		try {
 			while(this.game.timeToEnd()/1000!=0) {
+				this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
 				GraphInit();

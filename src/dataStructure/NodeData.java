@@ -63,7 +63,7 @@ public class NodeData implements node_data {
 		boolean flag=true;
 		if(obj!=null&&(obj instanceof node_data)){
 			NodeData n=(NodeData) obj;
-			if(this.Location!=n.getLocation()||this.weigth!=n.weigth||
+			if(!this.Location.close2equals(n.getLocation())||this.weigth!=n.weigth||
 					this.info!=n.getInfo()||this.tag!=n.getTag()
 					||this.id!=n.getKey())
 			{
