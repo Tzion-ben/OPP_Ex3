@@ -10,8 +10,7 @@ class gameLogicalyTest {
 
 	@BeforeAll
 	public static void beforeall() {
-		str=gameTest.getGraph();
-		gg.init(str);
+		
 	}
 
 

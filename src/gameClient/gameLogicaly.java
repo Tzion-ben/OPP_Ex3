@@ -124,39 +124,6 @@ public class gameLogicaly {
 		return destff;
 	}
 
-	/********************************************************************************************************
-	 * this method returns the location to put the clock on the screen of the game
-	 * @param gg
-	 * @return the point to put the time at the game
-	 ********************************************************************************************************/
-	public Range setRangeScaleToClock(DGraph gg) {
-		double minX=Double.MAX_VALUE,minY=Double.MAX_VALUE;
-		double maxX=Double.MIN_VALUE,maxY=Double.MIN_VALUE;
-		Collection<node_data> vert=gg.getV();
-		Iterator<node_data> vert_it=vert.iterator();
-		while(vert_it.hasNext()) {
-			node_data tt=vert_it.next();
-			Point3D pp=new Point3D(tt.getLocation());
-			if(pp.x()>maxX) 
-				maxX=pp.x();
-			if(pp.x()<minX) 
-				minX=pp.x();
-			if(pp.y()>maxY)
-				maxY=pp.y();
-			if(pp.y()<minY)
-				minY=pp.y();
-		}
-		Range middleX =new Range(minX, maxX);
-		double xMid=(middleX.get_length()/2)+minX+0.0035;
-		Range middleY =new Range(minY, maxY);
-		double yMid=(middleY.get_length()/2)+minY+0.0035;
-		Range corner =new Range(xMid, yMid);
-		//i am not use the range object "middle" at his purpose , 
-		//i decided to put it not minimum and maximum,nut to put the
-		//middle of x and middle of y scales to draw the picture of the map
-		return corner;
-	}
-
 	/*******************************************************************************************************
 	 * this method return the shortest path distance from the robot to the dest node of the fruit
 	 * @param srcV

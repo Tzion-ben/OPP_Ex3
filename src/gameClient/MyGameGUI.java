@@ -113,7 +113,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			fruit f1=new fruit(ff_it.next());
 			Point3D pF1=new Point3D(f1.getlocation());
 			if(f1.getType()==-1) {
-
 				StdDraw.setPenColor(Color.red);
 				StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 20));
 				StdDraw.picture(pF1.x(), pF1.y(), "icons\\"
@@ -145,6 +144,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		}
 	}
 
+	/**
+	 * this method draw the time on the screan
+	 */
 	private void drawTime() {
 		String timeToEnd=String.valueOf(this.game.timeToEnd()/1000);
 		StdDraw.setPenColor(Color.GRAY);
