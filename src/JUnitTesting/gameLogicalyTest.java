@@ -11,7 +11,9 @@ import org.junit.jupiter.api.Test;
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.DGraph;
+import dataStructure.NodeData;
 import dataStructure.edge_data;
+import dataStructure.node_data;
 import gameClient.fruit;
 import gameClient.gameLogicaly;
 import utils.Point3D;
@@ -49,17 +51,37 @@ class gameLogicalyTest {
 
 	@Test
 	void testGetFruitEdgeDest() {
-		fail("Not yet implemented");
+		int actual=gameLogicalyToTest.getFruitEdgeDest(ff, gg, gameTest);
+		int expected =8;
+		//*********is contain a edge 8 to 9 and 9 to 8 so at the end it return the at the sect actually the src 
+		//*********node id 
+		assertEquals(expected, actual);
+
 	}
 
 	@Test
 	void testTheBestWayToFruitDist() {
-		fail("Not yet implemented");
+		int srcV=9;
+		int destV=8;
+		double TheBestWayToFruitDist=gameLogicalyToTest.theBestWayToFruitDist(srcV, destV, gg);
+		double expected=1.4575484853801393;
+
+		assertEquals(expected, TheBestWayToFruitDist);
 	}
 
 	@Test
 	void testTheBestWayToFruit() {
-		fail("Not yet implemented");
+		int srcV=9;
+		int destV=8;
+		List<node_data> ans=gameLogicalyToTest.theBestWayToFruit(srcV, destV, gg);
+
+		int expectedSrc=9;
+		int expectedDest=8;
+
+		if(ans.get(0).getKey()!=expectedSrc)
+			fail();
+		if(ans.get(1).getKey()!=expectedDest)
+			fail();
 	}
 
 }
