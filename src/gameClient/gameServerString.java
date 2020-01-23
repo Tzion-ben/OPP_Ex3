@@ -1,5 +1,9 @@
 package gameClient;
-
+/**
+ * This class represent all the game details that redden from JSON String from the game_server,
+ * this class read the string and separate all the fields of the game details
+ * @author tzion
+ */
 import org.json.JSONException;
 import org.json.JSONObject;
 

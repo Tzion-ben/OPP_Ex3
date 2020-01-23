@@ -1,0 +1,5206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+  <Document>
+    <name>KML file of level number 18</name>
+<Style id="robot num 0">
+      <IconStyle>
+        <Icon>
+          <href>https://img.icons8.com/plasticine/100/000000/broken-robot.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+    </Style>
+<Style id="fruit num 0">
+      <IconStyle>
+        <Icon>
+          <href>https://img.icons8.com/doodle/48/000000/orange--v1.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+    </Style>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.585790900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20476669410815,32.108579959663864</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.587411200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20392770907119,32.10833067124629</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.711266200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20476669410815,32.108579959663864</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.711266200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.843993700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20447068666217,32.10849200669146</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.843993700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.948245800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20417909723777,32.10840536645</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:41.948245800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.051381600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.203889716824165,32.108319382573995</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.051381600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.155718800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2036135904753,32.10823733689079</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.155718800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.261881900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20335071819118,32.10815922940038</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.261881900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.369297700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20331095599695,32.10814741482199</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.369297700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.471824300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2030790098639,32.1080784964481</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.471824300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.578831100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20280951054741,32.10799841986129</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.578831100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.679886600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20254663826329,32.10792031237088</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.679886600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.781355800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20229481103313,32.107845486707795</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.781355800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.882886700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.202047401824544,32.10777197377564</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.882886700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.984671400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20179999261597,32.10769846084349</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:42.984671400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.086449200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2015503743966,32.10762429154587</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.086449200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.187587200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20129854716643,32.107549465882784</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.187587200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.291057500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20115813882163,32.10750774621849</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.291057500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.393329700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20115813882163,32.10750774621849</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.393329700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.495454900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.201210380493585,32.107352099092154</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.495454900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.596592500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20126406000973,32.10719216809995</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.596592500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.698410400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.201317260244466,32.10703366506304</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.698410400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.799742400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20137046047921,32.10687516202613</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.799742400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.901592200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20142461927674,32.10671380307864</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:43.901592200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.002850</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.201478778074275,32.106552444131154</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.002850</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.104621400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20153101974623,32.10639679700482</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.104621400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.206632300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20158469926236,32.106236866012615</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.206632300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.307939800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20163742021571,32.10607979093099</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.307939800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.409480500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10592668571429</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.409480500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.510476800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2016888087167,32.10592668571429</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.510476800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.611605300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20177586930586,32.10578438961126</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.611605300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.713385400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.201878989615345,32.10561584471252</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.713385400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.814637</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.201976193185764,32.10545697042273</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.814637</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.916086300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20207001576243,32.10530362219519</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:44.916086300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.024461200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20216299309065,32.10515165548321</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.024461200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.126122</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20225681566732,32.10499830725568</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.126122</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.228777400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.202354864486175,32.10483805145032</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.228777400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.330454800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.202450377559714,32.104681940191654</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.330454800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.432094400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20254589063325,32.10452582893299</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.432094400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.534751900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20255434311764,32.10451201377735</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.534751900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.636486100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20264140370679,32.104369717674324</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.636486100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.738069</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20273522628346,32.10421636944678</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.738069</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.840108500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20282989410856,32.10406163970368</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.840108500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.941116900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20292287143678,32.103909672991705</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:45.941116900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.042683700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.203019229758766,32.10375218021748</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.042683700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.144156</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20311981432294,32.103587779865435</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.144156</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.245343900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20321532739648,32.10343166860677</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.245343900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.346600200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20331506671221,32.103268649770285</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.346600200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.448820800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20332327199354,32.103255238655464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.448820800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.549882700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20346082484433,32.10323841515553</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.549882700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.652547300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20360754788517,32.10322047008894</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.652547300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.754424900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20376344111606,32.103201403455685</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.754424900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.855584800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.203911474184046,32.103183298165284</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.855584800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.957350600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20405950725204,32.103165192874876</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:46.957350600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.058916100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20420492026573,32.10314740803209</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.058916100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.160196300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20435033327942,32.10312962318931</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.160196300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.262067700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20450098640171,32.10311119745129</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.262067700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.363805300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20464770944255,32.103093252384696</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.363805300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.464637800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2046542595783,32.10309245126565</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.464637800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.564669400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204791812429086,32.10307562776572</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.564669400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.666306500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20480729308388,32.103060169951824</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.666306500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.768870600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204794078945795,32.102965139472</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.768870600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.870030900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20478040115374,32.10286677458937</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.870030900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.970459200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204767187015655,32.102771744109546</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:47.970459200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.071387200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20475443653153,32.102680048032525</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.071387200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.20622459040522,32.101281022067994</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.172711500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20474157013392,32.1025875183548</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.172711500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.276463</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2047288196498,32.102495822277774</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.276463</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.379389900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20471548959822,32.10239995819725</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.379389900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.484683300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204714330463304,32.102391622190254</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.484683300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.585362600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20470157997918,32.102299926113226</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.585362600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.685749200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20468882949506,32.102208230036204</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.685749200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.787408600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20467584718396,32.10211486675778</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.787408600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.889250300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204662748959365,32.102020669878655</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.889250300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.991603800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204650114388734,32.101929807402335</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:48.991603800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.093887100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20463666842366,32.101833109721106</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.093887100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.195896200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20462391793954,32.101741413644085</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.195896200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.297536800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20461058788796,32.101645549563564</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.297536800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.399380900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20459714192289,32.101548851882335</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.399380900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.500832700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20459687974173,32.10154696638656</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.500832700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.603602300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204597074240965,32.101548365142634</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.603602300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.705994</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204619441653335,32.101709222091145</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.705994</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.808196300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204641809065706,32.10187007903966</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.808196300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.910885200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20466359298037,32.102026739719946</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:49.910885200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.011890800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204684793397305,32.102179204132014</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.011890800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.113712900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204707160809676,32.102340061080525</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.113712900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.214375100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20472894472434,32.102496721760815</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.214375100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.315776800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20475189563442,32.10266177497755</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.315776800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.416145200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204774263046794,32.10282263192606</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.416145200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.517797800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2047748465445,32.10282682819428</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.517797800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.618150300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20479546346373,32.10297509633813</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.618150300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.719953800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.204838637682016,32.10306710146728</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.719953800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.820614</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20507034468549,32.10301676785788</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.820614</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.921300600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20530205168895,32.10296643424848</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:50.921300600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.022946300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.205544290828946,32.10291381274774</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.022946300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.125855800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20578442354163,32.10286164882526</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.125855800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.226028800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2060161305451,32.10281131521586</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.226028800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.327693300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.206247837548574,32.10276098160646</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.327693300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.429400700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20648797026126,32.10270881768398</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.429400700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.531167800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20672178369203,32.102658026496314</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.531167800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.631810900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20673020940125,32.10265619618325</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.631810900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.732484400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.206951384268194,32.10260815046518</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.732484400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.833389600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20718941055358,32.10255644412098</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.833389600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.939588600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20742111755705,32.10250611051157</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:51.939588600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.041182900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20765353833737,32.10245562184874</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.041182900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.141846400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20772142750017,32.10242194762732</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.141846400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.243505700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.207891150407164,32.10233776207377</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.243505700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.345165800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.208070130927275,32.102248984580946</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.345165800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.447691200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20824911144738,32.10216020708811</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.447691200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.548353600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20842654903197,32.1020721949185</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.548353600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.649014900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20843580664508,32.10206760297921</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.649014900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.750579700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20859472900345,32.10198877468817</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.750579700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.851312600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20876753778148,32.10190305848819</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.851312600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.952032500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20893726068849,32.10181887293464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:52.952032500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.052636900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20911161240204,32.10173239141145</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.052636900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.153222700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20928287824455,32.10164744053469</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.153222700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.253885100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.209457229958105,32.10156095901151</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.253885100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.355545500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.209636210478216,32.10147218151867</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.355545500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.457204500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.20981056219177,32.10138569999548</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.457204500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.558863200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2099833709698,32.101299983795506</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.558863200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.660529200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.209995714453946,32.1012938612098</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.660529200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.762181100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21016389442543,32.101210440979465</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.762181100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.862844300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21032811460856,32.10112898487395</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.862844300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.963506100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.210409107538275,32.10121918068458</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:53.963506100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.065167</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2106752271645,32.10151553834806</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.065167</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.166831600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21092977637219,32.10179901089574</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.166831600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.267488400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211193581914706,32.10209279153606</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.267488400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.369152200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211457387457216,32.10238657217638</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.369152200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.469979400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211718878916024,32.10267777579354</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.469979400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.571937500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21173507750197,32.102695814955666</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.571937500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.672599900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21197342812372,32.10296124834122</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.672599900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.773840600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.2122256632477,32.103242143865735</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.773840600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.874505100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21248715470651,32.103533347482895</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.874505100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.975406200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212753274332734,32.103829705146374</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:54.975406200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.076103500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21301245170783,32.10411833174037</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.076103500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.176282</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21315127845036,32.10427293277311</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.176282</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21233170626735,32.10466952803471</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.279271800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21309071110259,32.104302241629156</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.279271800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.379862800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212993276673565,32.104349390658456</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.379862800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.480725500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21289759781983,32.10439569015569</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.480725500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.581046600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21279928560316,32.10444326395102</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.581046600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.682732200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21279489666492,32.10444538778117</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.682732200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.783379500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21270097338649,32.10449083774635</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.783379500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.883568300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21260353895746,32.10453798677565</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.883568300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.984229400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21250610452844,32.104585135804946</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:55.984229400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.085210800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212409547887056,32.10463186006821</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.085210800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.186324</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21231211345803,32.10467900909751</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.186324</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.287266500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21221555681666,32.10472573336078</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.287266500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.387753900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21211110008644,32.104776280518315</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.387753900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.490410500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212015421232714,32.10482258001555</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.490410500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.590592900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21191886459133,32.10486930427882</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.590592900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.692252800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211909208927196,32.10487397670515</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.692252800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.792913800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21181967458701,32.10491730284018</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.792913800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.894572700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21172399573329,32.10496360233742</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.894572700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.21200574506042,32.105721621191464</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.995334</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211692026638694,32.104994198354134</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:56.995334</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.097969300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211724409231174,32.10506928427728</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.097969300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.199621200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21175463298416,32.105139364472215</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.199621200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.300287200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211785126592076,32.10521007038317</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.300287200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.401663</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21181481063518,32.10527889914606</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.401663</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.502316100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211845304243106,32.105349605057015</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.502316100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.603884300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211875527996085,32.10541968525195</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.603884300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.705104100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21190521203919,32.10548851401484</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.705104100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.807911700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211906021604,32.10549039116291</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.807911700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.909902800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.211935165937234,32.10555796849374</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:57.909902800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.010481400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21196538969022,32.10562804868868</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.010481400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.111997400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21199696271789,32.10570125746374</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.111997400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.212659</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212026646761,32.10577008622663</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.212659</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.314317700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21205714036891,32.105840792137585</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.314317700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.414982200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21208817368671,32.1059127494806</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.414982200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.515740100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212118667294625,32.10598345539156</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.515740100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.617400300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21214916090255,32.106054161302524</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.617400300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.725564300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212153748436485,32.10606479847497</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.725564300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.826795700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.212181003785155,32.106127995793614</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.826795700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.928605500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:58.928605500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.031144</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.031144</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.132282300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.132282300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.233124100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.233124100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.335233100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.335233100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.436233200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.436233200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.537515</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.537515</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.639356700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.639356700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.741043400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.741043400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.841715800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.841715800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.941870200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:21:59.941870200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.042033100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.042033100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.142046900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.142046900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.243334700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.243334700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.343346100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.343346100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.443956800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.443956800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.544942100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.544942100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.645007200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.645007200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.745813200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.745813200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.846661500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.846661500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.946674800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:00.946674800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.047549</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.047549</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.149210500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.149210500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.250943100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.250943100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.351655900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.351655900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.452704600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.452704600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.554403100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.554403100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.655890100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.655890100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.757161900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.757161900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.858472800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.858472800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.959138</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:01.959138</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.059565</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.059565</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.159993900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.159993900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.260625400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.260625400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.365321700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.365321700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.466592800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.466592800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.568157200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.568157200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.670156700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.670156700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.770979600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.770979600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.872210200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.872210200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.972384</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:02.972384</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.074191500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.074191500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.174978300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.174978300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.275540</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.275540</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.375777300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.375777300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.476322800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.476322800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.578244700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.578244700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.680093400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.680093400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.780139800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.780139800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.881021600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.881120600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.982093200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:03.982093200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.082376700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.082376700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.182398300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.182398300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.282876400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.282876400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.383516700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.383516700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.484817600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.484817600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.584984700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.584984700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.686624700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.686624700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.786781900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.786781900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.888457900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.888457900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.989487200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:04.989487200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.089748900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.089748900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.191332900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.191332900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.291632400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.291632400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.391680400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.391680400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.492584</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.492584</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.593329800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.593329800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.693911700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.693911700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.794028400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.794028400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.894438100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.894438100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.995157300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:05.995157300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.095748</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.095748</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.195843200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.195843200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.296538700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.296538700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.396593500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.396593500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.497301600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.497301600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.598167700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.598167700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.698455800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.698455800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.798623600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.798623600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.900537</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:06.900694400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.002077500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.002077500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.102586200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.102586200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.203665700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.203665700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.304658400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.304658400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.406233800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.406233800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.507392</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.508389900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.610190800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.610190800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.711292100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.711292100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.812217200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.812217200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.913135800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:07.913135800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.013153</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.013153</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.114531200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.114531200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.215094600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.215094600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.315163900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.315163900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.415357900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.415357900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.516179600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.516179600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.616621800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.616621800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.718567900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.718567900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.819539900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.819539900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.920635100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:08.920635100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.022121100</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.022121100</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.123178600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.123178600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.223631300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.223631300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.324890900</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.324890900</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.425434200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.425434200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.526057200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.526057200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.627042300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.627042300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.727110700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.727110700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.828037300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.828037300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.928768200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:09.928768200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.028887500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.028887500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.130445200</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.130445200</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.230983500</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.230983500</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.331895800</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.331895800</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.432605700</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.432605700</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.532847300</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.532847300</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.634454400</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:10.634454400</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:12.544654600</when>
+      </TimeStamp>
+      <styleUrl>#robot num 0</styleUrl>
+      <Point>
+        <coordinates>35.21219607263922,32.10616293613445</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>02:22:12.544654600</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.212532074496366,32.106982780342726</coordinates>
+      </Point>
+    </Placemark>
+ </Document>
+</kml>

@@ -1,17 +1,13 @@
 package JUnitTesting;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.List;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.DGraph;
 import dataStructure.NodeData;
-import dataStructure.edgeData;
-import dataStructure.edge_data;
 import dataStructure.node_data;
-import gameClient.fruit;
 import utils.Point3D;
 
 class DGraphTest_v2 {
@@ -119,10 +115,7 @@ class DGraphTest_v2 {
 		ggCOpy.connect(9, 10, 1.022651770039933);
 		ggCOpy.connect(10, 0, 1.1761238717867548);
 		ggCOpy.connect(10, 9, 1.0887225789883779);
-		
-		
-		boolean flag=gg.equals(ggCOpy);
+
 		assertEquals(gg, ggCOpy);
 	}
-
 }

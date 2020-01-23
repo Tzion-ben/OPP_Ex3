@@ -1,5 +1,9 @@
 package gameClient;
-
+/**
+ * This class represent a robot that redden from JSON String from the game_server, this class
+ * read the string and separate all the fields of the robot
+ * @author tzion
+ */
 import org.json.JSONException;
 import org.json.JSONObject;
 

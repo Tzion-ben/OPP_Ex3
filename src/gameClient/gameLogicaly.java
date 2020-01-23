@@ -22,7 +22,6 @@ import utils.Range;
 public class gameLogicaly {
 	public gameLogicaly() {;}
 	//**************************************************************************
-
 	/***********************************************************************************************
 	 * this method guts the graph and the game at the specific level and calculate the place of the 
 	 * fruit on it for the automatically game
@@ -118,7 +117,7 @@ public class gameLogicaly {
 				String allDistPlusString=new DecimalFormat("0.0000").format(allDistPlus);
 				double allDistPlus4Digits=Double.parseDouble(allDistPlusString);
 				if(allDistPlus4Digits==destanceEAfter)
-				//if((destanceEFS1After+destanceEFS2After)+0.000001==destanceEAfter) 
+					//if((destanceEFS1After+destanceEFS2After)+0.000001==destanceEAfter) 
 					destff=destE;
 			}
 		}

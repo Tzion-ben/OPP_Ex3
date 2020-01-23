@@ -1,15 +1,20 @@
 package gameClient;
-
+/**
+ * This class represent game GUI of game that based on directional graph, on the edges  have a
+ * fruits and robots and the robots competing between them on hoe will eat more fruits , 
+ * every fruit gut a grade(value).
+ * The class represent a manually ant automatically games , depend on the chose of the user
+ * Another small thing that this class create , this class take the samples for the KML file, 
+ * for the KML_Logger class.
+ * @author tzion
+ */
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;

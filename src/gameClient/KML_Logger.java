@@ -1,12 +1,15 @@
 package gameClient;
-
+/**
+ * This class represent a KML file maker , this cless create a KML file.
+ * It create the placemarks , the icon details and the start and the end of the file.
+ * @author tzion
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import utils.Point3D;
 
 public class KML_Logger {

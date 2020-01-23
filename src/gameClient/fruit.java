@@ -1,15 +1,12 @@
 package gameClient;
-
-import org.json.JSONArray;
+/**
+ * This class represent a fruit that redden from JSON String from the game_server, this class
+ * read the string and separate all the fields of the fruit
+ * @author tzion
+ */
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONString;
-
-import dataStructure.NodeData;
-import dataStructure.node_data;
 import utils.Point3D;
-
-
 
 public class fruit {
 
@@ -31,31 +28,31 @@ public class fruit {
 	public Point3D getlocation() {
 		return this.location;
 	}
-	
+
 	public String getIconName() {
 		return this.iconName;
 	}
-	
+
 	public String getIconAddress() {
 		return this.iconAddress;
 	}
-	
+
 	public int getIconID() {
 		return this.iconID;
 	}
 	//end getters
-	
+
 	//set only for the icon id to KML file
 	public void setIconID(int iconID) {
 		this.iconID=iconID;
 	}
-	
+
 	public void setIconName(int ID) {
 		String fullName="fruit num "+ID;
 		this.iconName=fullName;
 	}
 	//end of the set
-	
+
 	private  void setFromJson(String str) {		
 		try {
 			JSONObject line = new JSONObject(str);
