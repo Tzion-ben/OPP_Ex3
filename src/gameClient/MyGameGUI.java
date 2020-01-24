@@ -460,7 +460,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		try {
 			scenario_num =JOptionPane.showInputDialog(this,"Choose a level to the game");
 			level=Integer.parseInt(scenario_num);
-			while(level>23||level<0) {
+			while(level>23||level<-10) {
 				JOptionPane.showMessageDialog( this, "ERROR, worng level input, please try again");
 				scenario_num =JOptionPane.showInputDialog(this,"Choose a level to the game");
 				level=Integer.parseInt(scenario_num);
