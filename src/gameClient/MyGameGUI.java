@@ -337,6 +337,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
+
+				/*******************************************************************8
+				 * CHANGE HERE TO WHILE LOOP !!
+				 * to jump to the next robot !!
+				 */
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
 					ArrayList<Integer> postion=this.logicHelp.calculateFriutPosionToEdge(ffTemp, gg, game);
@@ -353,15 +358,12 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 							theBestDestId=destFruit;
 						}
 					}
-					//if the fruit dest and the robot position is at the same node
+
 					else {
-						int typeF=ffTemp.getType();
-						if(typeF==1) {
-							theBestDestId=destFruit-1;
-						}
-						else {
-							theBestDestId=destFruit+1;
-						}
+						if(destFruit==postion.get(0))
+							theBestDestId=postion.get(1);
+						else
+							theBestDestId=postion.get(0);		
 					}
 				}//end of the for of fruits
 				if(this.game.timeToEnd()/1000==0) {
@@ -374,16 +376,17 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					Iterator<node_data> path_it=THEPATH.iterator();
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
+						try {
+							Thread.sleep(50);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						this.game.move();
+						setPalceMarks(PlaceMarks);
 					}
-					
 				}
-				
 			}
-			try {
-				Thread.sleep(100);
-				this.game.move();
-				setPalceMarks(PlaceMarks);
-			} catch (InterruptedException e) {e.printStackTrace();}
 		}//end of the while loop
 		//**********iterator to print the score of all the robots after the game
 

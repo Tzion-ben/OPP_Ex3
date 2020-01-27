@@ -110,7 +110,6 @@ public class gameLogicaly {
 			toReturn=ggALGO.shortestPathDist(srcV, destV);		
 		return toReturn;
 	}
-
 	/*******************************************************************************************************
 	 * this method return the shortest path (List of Nodes) from the robot to the fruit
 	 * @param srcV
