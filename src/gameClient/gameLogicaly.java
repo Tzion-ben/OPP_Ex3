@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import Server.game_service;
 import dataStructure.DGraph;
+import dataStructure.NodeData;
 import dataStructure.edge_data;
 import dataStructure.node_data;
 import algorithems.*;
@@ -28,100 +29,73 @@ public class gameLogicaly {
 	 * @param game
 	 * @return ArryList of all the closely vertexes to all the fruits
 	 ***********************************************************************************************/
-	public ArrayList<Integer> calculateFriutPosionToEdge(DGraph gg,game_service game) {
-		ArrayList<Integer> srces=new ArrayList<Integer>();
+	public ArrayList<Integer> calculateFriutPosionToEdge(fruit ff,DGraph gg,game_service game) {
+		ArrayList<Integer> Position=new ArrayList<Integer>();
 
 		Collection<node_data> vv=gg.getV();
 		Iterator<node_data> vv_iter=vv.iterator();
-		
-		List<String> fruitss=game.getFruits();
-		Iterator<String> f_iter=fruitss.iterator();
-		while(f_iter.hasNext()) {
-			fruit ff=new fruit(f_iter.next());
-			Point3D pF=new Point3D(ff.getlocation());
-			//**********takes the position of the fruit
-			while(vv_iter.hasNext()) {
-				node_data nn=vv_iter.next();
-				Point3D nnPPSrc=nn.getLocation(); 
-				//of 1 maximum from the fruit them work on his edges
-				Collection<edge_data> eVV=gg.getE(nn.getKey());
-				Iterator <edge_data> ee=eVV.iterator();
-				//iterate on all his edges
-				while(ee.hasNext()) {
-					edge_data tempEE=ee.next();
-					int srcE=tempEE.getSrc();
-					int destE=tempEE.getDest();
-					Point3D destEPoint=new Point3D(gg.getNode(destE).getLocation());
-					//calculating the distance of the edge
-					double destanceE =nnPPSrc.distance2D(destEPoint);
-					String destanceETo4Digits=new DecimalFormat("0.0000").format(destanceE);
-					double destanceEAfter=Double.parseDouble(destanceETo4Digits);
-					//calculating the distance from the fruit to the one side of the edge
-					double destanceEFS1 =nnPPSrc.distance2D(pF);
-					String destanceEFS1To4Digits=new DecimalFormat("0.0000").format(destanceEFS1);
-					double destanceEFS1After=Double.parseDouble(destanceEFS1To4Digits);
-					//calculating the distance from the fruit to the one side of the edge
-					double destanceEFS2 =destEPoint.distance2D(pF);
-					String destanceEFS2To4Digits=new DecimalFormat("0.0000").format(destanceEFS2);
-					double destanceEFS2After=Double.parseDouble(destanceEFS2To4Digits);
-					if((destanceEFS1After+destanceEFS2After)<=destanceEAfter) { 
-						srces.add(srcE);
-						srces.add(destE);
+
+		Point3D ffP=ff.getlocation();
+		//the location of the fruit
+		while(vv_iter.hasNext()) {
+			node_data nn=vv_iter.next();
+			Point3D src=nn.getLocation(); 
+			//takes the next node and it's location
+			Collection<edge_data> ee=gg.getE(nn.getKey());
+			Iterator <edge_data> ee_iter=ee.iterator();
+			//iterate all the edges of the node
+			while(ee_iter.hasNext()) {
+				edge_data eee=ee_iter.next();
+				Point3D dest=gg.getNode(eee.getDest()).getLocation();
+				//location of the dest node of that edge
+
+				double distAllE=src.distance2D(dest);
+				double distFtoSrc=src.distance2D(ffP);
+				double distFtoDest=ffP.distance2D(dest);
+				if(Position.size()!=2) {
+					if((distFtoSrc+distFtoDest)<=distAllE+0.00000001) { 
+						Position.add(eee.getSrc());
+						Position.add(eee.getDest());
 					}
+				}
+			}//end while
+		}
+		if(Position.isEmpty())
+			Position.add(-1);
+		return Position;
+	}
+
+	/*******************************************************************************************************
+	 * this method guts the fruit and return the dest of the fruit according to the fruit type
+	 *******************************************************************************************************/
+	public int fruitDEST(fruit ff,DGraph gg,game_service game) {
+		int destF=-1;
+		ArrayList<Integer>ans=calculateFriutPosionToEdge(ff,gg,game);
+		if(ans.get(0)!=-1) {
+			if(ff.getType()==1) {
+				if(ans.get(0)>ans.get(1)) {
+					destF=ans.get(0);
+					return destF;
+				}
+				else {
+					destF=ans.get(1);
+					return destF;
+				}
+			}
+			//it the fruit type is -1
+			else {
+				if(ans.get(0)>ans.get(1)) {
+					destF=ans.get(1);
+					return destF;
+				}
+				else {
+					destF=ans.get(0);
+					return destF;
 				}
 			}
 		}
-		if(srces.isEmpty())
-			srces.add(-1);
-		return srces;
+		return destF;
 	}
-
-	/*****************************************************************************************************
-	 * this method returns the specific destination of the edge that on it the fruit is
-	 * @return
-	 *****************************************************************************************************/
-	public int getFruitEdgeDest (fruit ff,DGraph gg,game_service game) {
-		int destff=-1;
-
-		Collection<node_data> vv=gg.getV();
-		Iterator<node_data> vv_iter=vv.iterator();
-
-		while(vv_iter.hasNext()) {
-			Point3D pF=new Point3D(ff.getlocation());
-			//**********takes the position of the fruit
-			node_data nn=vv_iter.next();
-			Point3D nnPPSrc=nn.getLocation(); 
-			//take the source of the node
-			Collection<edge_data> eVV=gg.getE(nn.getKey());
-			Iterator <edge_data> ee=eVV.iterator();
-			//iterate on all his edges
-			while(ee.hasNext()) {
-				edge_data tempEE=ee.next();
-				int destE=tempEE.getDest();
-				Point3D destEPoint=new Point3D(gg.getNode(destE).getLocation());
-				//calculating the distance of the edge
-				double destanceE =nnPPSrc.distance2D(destEPoint);
-				String destanceETo4Digits=new DecimalFormat("0.0000").format(destanceE);
-				double destanceEAfter=Double.parseDouble(destanceETo4Digits);
-				//calculating the distance from the fruit to the one side of the edge
-				double destanceEFS1 =nnPPSrc.distance2D(pF);
-				String destanceEFS1To4Digits=new DecimalFormat("0.0000").format(destanceEFS1);
-				double destanceEFS1After=Double.parseDouble(destanceEFS1To4Digits);
-				//calculating the distance from the fruit to the one side of the edge
-				double destanceEFS2 =destEPoint.distance2D(pF);
-				String destanceEFS2To4Digits=new DecimalFormat("0.0000").format(destanceEFS2);
-				double destanceEFS2After=Double.parseDouble(destanceEFS2To4Digits);
-				///*****************
-				double allDistPlus=destanceEFS1After+destanceEFS2After;
-				String allDistPlusString=new DecimalFormat("0.0000").format(allDistPlus);
-				double allDistPlus4Digits=Double.parseDouble(allDistPlusString);
-				if(allDistPlus4Digits==destanceEAfter)
-					destff=destE;
-			}
-		}
-		return destff;
-	}
-
 	/*******************************************************************************************************
 	 * this method return the shortest path distance from the robot to the dest node of the fruit
 	 * @param srcV

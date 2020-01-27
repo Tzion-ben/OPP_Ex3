@@ -38,7 +38,7 @@ public class SimpleGameClient  {
 		test1();}
 	public static void test1() {
 		game_service game = Game_Server.getServer(2); // you have [0,23] games
-		MyGameGUI gameScrean=new MyGameGUI();
+		//MyGameGUI gameScrean=new MyGameGUI();
 		String g = game.getGraph();
 		OOP_DGraph gg = new OOP_DGraph();
 		gg.init(g);

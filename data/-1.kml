@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+  <Document>
+    <name>KML file of level number -1</name>
+<Style id="fruit num 0">
+      <IconStyle>
+        <Icon>
+          <href>https://img.icons8.com/doodle/48/000000/orange--v1.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+    </Style>
+<Style id="fruit num 1">
+      <IconStyle>
+        <Icon>
+          <href>https://img.icons8.com/doodle/48/000000/orange--v1.png</href>
+        </Icon>
+        <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+      </IconStyle>
+    </Style>
+<Placemark>
+      <TimeStamp>
+        <when>01:25:15.104951</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 0</styleUrl>
+      <Point>
+        <coordinates>35.197656770719604,32.10191878639921</coordinates>
+      </Point>
+    </Placemark>
+<Placemark>
+      <TimeStamp>
+        <when>01:25:15.106941</when>
+      </TimeStamp>
+      <styleUrl>#fruit num 1</styleUrl>
+      <Point>
+        <coordinates>35.199963710098416,32.105723673136964</coordinates>
+      </Point>
+    </Placemark>
+ </Document>
+</kml>

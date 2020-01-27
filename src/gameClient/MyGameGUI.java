@@ -152,8 +152,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		StdDraw.setPenColor(Color.GRAY);
 		StdDraw.setFont(new Font("Allegro", Font.HANGING_BASELINE, 20));
 		StdDraw.text(35.20123001129944, 32.10820000084034,  "The time to end of the game "+timeToEnd);
-		//StdDraw.text(toTimeLocation.get_min(), toTimeLocation.get_max(), "The time to end of the game"+timeToEnd);
-	}
+		String thisGame=this.game.toString();
+		gameServerString thisGamee=new gameServerString(thisGame);
+		StdDraw.text(35.20123001129944, 32.10780000092025,  "Number of moves is  "+thisGamee.getNumMoves());	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -271,30 +272,48 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		String thisGame=this.game.toString();
 		gameServerString thisGamee=new gameServerString(thisGame);
 		int numRob=thisGamee.getNumRobbots();
-		ArrayList<Integer> srcesOfPosFruit =logicHelp.calculateFriutPosionToEdge(gg, game);
-		int sizeSRC=srcesOfPosFruit.size();
+		//numderOfRobots
+
+		List<String> fruitt=this.game.getFruits();
+		Iterator<String> fruitt_iter=fruitt.iterator();
+		fruit ff=new fruit(fruitt_iter.next());
+		int destF=this.logicHelp.fruitDEST(ff, gg, game);
+		//get the first fruit at the fruit list
+		int numNODES=gg.getV().size();
+
 		//if number of the robots is less then the number of the edges:
-		if(numRob<sizeSRC) {
-			for(int i=1;i<=numRob;i++) 
-				this.game.addRobot(srcesOfPosFruit.get(i));
-		}
-		else {
-			int tt=-1;
-			Iterator<Integer> ssrrcc=srcesOfPosFruit.iterator();
-			while(ssrrcc.hasNext()) {
-				tt=ssrrcc.next();
-				for(int i=1;i<=numRob;i++) 
-					this.game.addRobot(tt);
+		for(int i=0;i<numRob;i++) {
+			int type=ff.getType();
+			if(destF!=0) {
+				if(type==1) {
+					destF--;
+					this.game.addRobot(destF);
+				}
+				else {
+					destF++;
+					this.game.addRobot(destF);
+				}
+			}
+			else {
+				if(type==1) {
+					this.game.addRobot(numNODES-1);
+					destF++;
+				}
+				else {
+					destF++;
+					this.game.addRobot(destF);
+				}
 			}
 		}
+
 		drawRobbots();
 		automaticallyGame(gg);
 	}
 
-	/**
+	/*************************************************************************************************************
 	 * this method is activate the automatically game with all the drawing methods and the thread, 
 	 * and in the end it print out the scores of all the robots
-	 */
+	 ************************************************************************************************************/
 	private void automaticallyGame(DGraph gg) {
 		List <String> rr=this.game.getRobots();
 		List <String> ff=this.game.getFruits();
@@ -307,24 +326,41 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		Thread tt=new Thread(this);
 		this.game.startGame();
 		tt.start();
+
 		while(this.game.isRunning()) {
 			rr=this.game.getRobots();
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
 				double theBestPathDist=Integer.MAX_VALUE;
+
 				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
-					int destFruit=this.logicHelp.getFruitEdgeDest(ffTemp, gg, this.game);
-					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot, destFruit, gg);
+					ArrayList<Integer> postion=this.logicHelp.calculateFriutPosionToEdge(ffTemp, gg, game);
+					//returns the src and the dest of the edge that the fruit is on it
+
+					int destFruit=this.logicHelp.fruitDEST(ffTemp, gg, game);			
+					//the dest of the fruit depend on it's type
+
+					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot,destFruit, gg);
 					//****the shortedtdist from the robot to fruit
 					if(tempPathDist!=-1) {
 						if((tempPathDist<theBestPathDist)&&(this.game.timeToEnd()/1000!=0)) {
 							theBestPathDist=tempPathDist;
 							theBestDestId=destFruit;
+						}
+					}
+					//if the fruit dest and the robot position is at the same node
+					else {
+						int typeF=ffTemp.getType();
+						if(typeF==1) {
+							theBestDestId=destFruit-1;
+						}
+						else {
+							theBestDestId=destFruit+1;
 						}
 					}
 				}//end of the for of fruits
@@ -338,13 +374,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					Iterator<node_data> path_it=THEPATH.iterator();
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
-						this.game.move();
 					}
-
+					
 				}
+				
 			}
 			try {
 				Thread.sleep(100);
+				this.game.move();
 				setPalceMarks(PlaceMarks);
 			} catch (InterruptedException e) {e.printStackTrace();}
 		}//end of the while loop
@@ -438,10 +475,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				chooseStr=JOptionPane.showInputDialog( this, "ERROR, worng level input, please try again");
 				choose=Integer.parseInt(chooseStr);
 			}
-			if(choose==1) 
+			if(choose==1) {
 				manuallyGameManger(gg);
-			else if(choose==0)
+				this.autoORmanual=1;
+			}
+			else if(choose==0) {
 				automaticallyGameManger(gg);
+				this.autoORmanual=0;
+			}
 		}
 		catch (Exception e) {
 			//JOptionPane.showMessageDialog(this, "ERROR, worng level input ,RUN IT AGAIN");
@@ -454,7 +495,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 * this method is let to the user to choose the level of the game that he want
 	 * to play
 	 ***************************************************************************************************************/
-	private void chooseLevel() {
+	public void chooseLevel() {
+		loGin();
 		int level=0;
 		String scenario_num="";
 		try {
@@ -481,7 +523,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	 * @param file
 	 * @throws IOException
 	 **************************************************************************************************/
-	private void initKMLfile (ArrayList<String> icons,ArrayList<String> placeMarks, int level)
+	public void initKMLfile (ArrayList<String> icons,ArrayList<String> placeMarks, int level)
 			throws IOException {
 		String fileKML = "data\\"+level+".kml";
 		this.newFileKMLforGame.alltDoc(icons, placeMarks, level,fileKML);
@@ -495,6 +537,18 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 	//*************************************************************************************************
 
+	/**************************************************************************************************
+	 *this method let the user write his id and login
+	 **************************************************************************************************/
+	public void loGin() {
+		String idString=JOptionPane.showInputDialog(this,"Enter your ID to play");
+		while(idString.length()!=9) {
+			JOptionPane.showMessageDialog( this, "ERROR, worng ID, please try again");
+			idString=JOptionPane.showInputDialog(this,"Enter your ID to play");
+		}
+		Integer id =Integer.parseInt(idString);
+		Game_Server.login(id);
+	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -540,6 +594,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private gameLogicaly logicHelp=new gameLogicaly();
 	KML_Logger newFileKMLforGame=new KML_Logger();
 	private int level;
+	private int autoORmanual;
+	//auto==0 , manual==1
 	//**********************************************************************************************************
 
 	/*******************************the Thread run method ******************************************************
@@ -550,7 +606,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	public void run() {  
 		try {
 			while(this.game.timeToEnd()/1000!=0) {
-				this.game.move();
+				if(this.autoORmanual==1)
+					this.game.move();
 				StdDraw.clear();
 				StdDraw.enableDoubleBuffering();
 				GraphInit();
