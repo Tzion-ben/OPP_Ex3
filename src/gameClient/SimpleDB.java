@@ -23,11 +23,11 @@ public class SimpleDB {
 			int id1 = 312431778;  // "real" existing ID & KML
 			//int id2 = 12345678;
 			int level = 0;//1,2,3
-			printLog(id1);
-			allUsers();	
+			//printLog(id1);
+			//allUsers();	
 			String kml1 = getKML(id1,level);
 			System.out.println("***** KML1 file example: ******");
-			//System.out.println(kml1);
+			System.out.println(kml1);
 		}
 	/** simply prints all the games as played by the users (in the database).
 	 * 
@@ -35,6 +35,7 @@ public class SimpleDB {
 		public static void printLog(int id) {
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
+				//this method load the driver, belongs to class CLASS
 				Connection connection = 
 						DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcUserPassword);
 				Statement statement = connection.createStatement();
@@ -44,7 +45,9 @@ public class SimpleDB {
 				int ind =0;
 				while(resultSet.next())
 				{
-					System.out.println(ind+") Id: " + resultSet.getInt("UserID")+", level: "+resultSet.getInt("levelID")+", score: "+resultSet.getInt("score")+", moves: "+resultSet.getInt("moves")+", time: "+resultSet.getDate("time"));
+					System.out.println(ind+") Id: " + resultSet.getInt("UserID")+", level: "+
+				resultSet.getInt("levelID")+", score: "+resultSet.getInt("score")+", moves:"
+						+ " "+resultSet.getInt("moves")+", time: "+resultSet.getDate("time"));
 					ind++;
 				}
 				resultSet.close();

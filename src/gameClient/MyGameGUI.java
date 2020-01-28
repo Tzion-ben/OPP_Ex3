@@ -21,6 +21,12 @@ import java.util.Iterator;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.*;
@@ -371,15 +377,19 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						try {
-							long sleep=(long)((long)130/rtemp.getSpeed());
+							long sleep=(long)((long)55/rtemp.getSpeed());
 							//System.out.println("sleep"+sleep);
+							//if(this.game.timeToEnd()/1000>20)
 							Thread.sleep(sleep);
+							//							else
+							//								Thread.sleep(10);
 							setPalceMarks(PlaceMarks);
 						} catch (InterruptedException e) {e.printStackTrace();}
 					}
-					this.game.move();
+					//this.game.move();
 				}
 			}
+			this.game.move();
 		}//end of the while loop
 
 		//**********iterator to print the score of all the robots after the game
@@ -399,6 +409,16 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
+		String res = game.toString();
+		System.out.println(res);
+
+		String fileName="data\\"+this.level+".kml";
+		String specificKMLfile;
+		try {
+			specificKMLfile = KMLString(fileName);
+			game.sendKML(specificKMLfile); 
+			System.out.println(specificKMLfile);
+		} catch (FileNotFoundException e) {e.printStackTrace();}		
 	}
 
 	/******************************************************************************************************
@@ -523,6 +543,28 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			throws IOException {
 		String fileKML = "data\\"+level+".kml";
 		this.newFileKMLforGame.alltDoc(icons, placeMarks, level,fileKML);
+	}
+
+	/**************************************************************************************************
+	 * this method will return all the KML file as a string
+	 * @return
+	 **************************************************************************************************/
+	public String KMLString(String file_name) throws FileNotFoundException {
+		String ans="";
+		StringBuilder contentBuilder = new StringBuilder();
+		BufferedReader br=null;
+		try {
+			br = new BufferedReader(new FileReader(file_name));
+			String sCurrentLine;
+			while ((sCurrentLine = br.readLine()) != null) 
+			{
+				contentBuilder.append(sCurrentLine).append("\n");
+			}
+
+
+		} catch (IOException e) {e.printStackTrace();}
+		return ans;
+		//if the file is not found it returns a empty string 
 	}
 	/*************************************************************************************************
 	 * This private method is works only if there is some Exception, and this method allows to the user 
