@@ -13,11 +13,8 @@ public class loginTOgameManager implements Runnable {
 		Thread client = new Thread(new loginTOgameManager());
 		client.start();
 	}
-	
+
 	public void run() {
-//		int id =312431778;
-//		Game_Server.login(id);
-		//this.newGame.chooseLevel();
 	}
 	/*******************************************************************************************
 	 ***********************************contractor**********************************************

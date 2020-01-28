@@ -546,23 +546,12 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	}
 
 	/**************************************************************************************************
-	 * this method will return all the KML file as a string
+	 * this method will return all the KML file as a string (all the work is at the KML_Logger class)
 	 * @return
 	 **************************************************************************************************/
 	public String KMLString(String file_name) throws FileNotFoundException {
 		String ans="";
-		StringBuilder contentBuilder = new StringBuilder();
-		BufferedReader br=null;
-		try {
-			br = new BufferedReader(new FileReader(file_name));
-			String sCurrentLine;
-			while ((sCurrentLine = br.readLine()) != null) 
-			{
-				contentBuilder.append(sCurrentLine).append("\n");
-			}
-
-
-		} catch (IOException e) {e.printStackTrace();}
+		ans=this.newFileKMLforGame.KMLString(file_name);;
 		return ans;
 		//if the file is not found it returns a empty string 
 	}

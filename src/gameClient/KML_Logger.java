@@ -1,4 +1,5 @@
 package gameClient;
+import java.io.BufferedReader;
 /**
  * This class represent a KML file maker , this cless create a KML file.
  * It create the placemarks , the icon details and the start and the end of the file.
@@ -6,6 +7,8 @@ package gameClient;
  */
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -95,15 +98,27 @@ public class KML_Logger {
 		} 
 		catch (FileNotFoundException e) {e.printStackTrace();}
 	}
-	
-	/********************************************************************************************
-	 * 
-	 ********************************************************************************************
-	 */
-	public void readToString() {
-		
-	}
 
+	/**************************************************************************************************
+	 * this method will return all the KML file as a string
+	 * @return
+	 **************************************************************************************************/
+	public String KMLString(String file_name) throws FileNotFoundException {
+		String ans="";
+		StringBuilder contentBuilder = new StringBuilder();
+		BufferedReader brToKML=null;
+		try {
+			brToKML = new BufferedReader(new FileReader(file_name));
+			String sCurrentLine;
+			while ((sCurrentLine = brToKML.readLine()) != null) 
+			{
+				contentBuilder.append(sCurrentLine).append("\n");
+				ans+=sCurrentLine+"\n";	
+			}
+		} catch (IOException e) {e.printStackTrace();}
+		//if the file is not found it returns a empty string 
+		return ans;
+	}
 	/****************************************************************************************************
 	 ********************************contractor for the create KML file**********************************
 	 ***************************************************************************************************/
