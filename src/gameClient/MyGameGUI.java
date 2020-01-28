@@ -154,7 +154,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		StdDraw.text(35.20123001129944, 32.10820000084034,  "The time to end of the game "+timeToEnd);
 		String thisGame=this.game.toString();
 		gameServerString thisGamee=new gameServerString(thisGame);
-		StdDraw.text(35.20123001129944, 32.10780000092025,  "Number of moves is  "+thisGamee.getNumMoves());	}
+		StdDraw.text(35.20123001129944, 32.10780000092025,  "Number of moves is  "+thisGamee.getNumMoves());
+	}
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -252,13 +253,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			int iRun=1;
 			while(r_after.hasNext()) {
 				robbot rrr= new robbot(r_after.next());
-				Thread.sleep(1000);
+				Thread.sleep(250);
 				JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 			}
 		}
-		catch (Exception e) {
-			e.getStackTrace();
-		}
+		catch (Exception e) {e.getStackTrace();}
 	}
 
 	//****************************************automatically game method************************************
@@ -332,16 +331,12 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			ff=this.game.getFruits();
 			for(int i=0;i<rr.size();i++) {
 				robbot rtemp=new robbot(rr.get(i));
-				double theBestPathDist=Integer.MAX_VALUE;
+				double theBestPathDist=Double.MAX_VALUE;
 
 				int theBestDestId=rtemp.getDest();
 				int srcOFrobot=rtemp.getSrc();
 				//take the every robot and runs on all the fruits
 
-				/*******************************************************************8
-				 * CHANGE HERE TO WHILE LOOP !!
-				 * to jump to the next robot !!
-				 */
 				for(int j=0;j<ff.size();j++) {
 					fruit ffTemp=new fruit(ff.get(j));
 					ArrayList<Integer> postion=this.logicHelp.calculateFriutPosionToEdge(ffTemp, gg, game);
@@ -358,12 +353,11 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 							theBestDestId=destFruit;
 						}
 					}
-
 					else {
-						if(destFruit==postion.get(0))
-							theBestDestId=postion.get(1);
-						else
-							theBestDestId=postion.get(0);		
+						//***********if the dest of the robot and the fruit is the same so send the 
+						//robot to the src of the fruit
+						theBestDestId=this.logicHelp.fruitSRC(ffTemp, gg, game);
+						theBestPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot,theBestDestId, gg);;
 					}
 				}//end of the for of fruits
 				if(this.game.timeToEnd()/1000==0) {
@@ -377,26 +371,25 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						try {
-							Thread.sleep(50);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						this.game.move();
-						setPalceMarks(PlaceMarks);
+							long sleep=(long)((long)130/rtemp.getSpeed());
+							//System.out.println("sleep"+sleep);
+							Thread.sleep(sleep);
+							setPalceMarks(PlaceMarks);
+						} catch (InterruptedException e) {e.printStackTrace();}
 					}
+					this.game.move();
 				}
 			}
 		}//end of the while loop
-		//**********iterator to print the score of all the robots after the game
 
+		//**********iterator to print the score of all the robots after the game
 		List<String> robotosAfter=this.game.getRobots();
 		Iterator<String> r_after=robotosAfter.iterator();
 		int iRun=1;
 		while(r_after.hasNext()) {
 			robbot rrr= new robbot(r_after.next());
 			try {
-				Thread.sleep(1000);}
+				Thread.sleep(250);}
 			catch (InterruptedException e) {e.printStackTrace();}
 			JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 		}
@@ -602,9 +595,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	//**********************************************************************************************************
 
 	/*******************************the Thread run method ******************************************************
-	/**
-	 * run method of the thread
-	 */
+	/***********************************************************************************************************
+	 ****************************************run method of the thread*******************************************
+	 ***********************************************************************************************************/
 	@Override
 	public void run() {  
 		try {
@@ -619,7 +612,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				drawTime();
 				StdDraw.disableDoubleBuffering();
 				StdDraw.show();
-				Thread.sleep(100);
+				Thread.sleep(80);
 			}
 		}
 		catch (InterruptedException e) {e.printStackTrace();}

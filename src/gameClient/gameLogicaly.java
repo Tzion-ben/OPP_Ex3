@@ -96,6 +96,39 @@ public class gameLogicaly {
 		}
 		return destF;
 	}
+	
+	/*******************************************************************************************************
+	 * this method guts the fruit and return the src of the fruit according to the fruit type
+	 *******************************************************************************************************/
+	public int fruitSRC(fruit ff,DGraph gg,game_service game) {
+		int srcF=-1;
+		ArrayList<Integer>ans=calculateFriutPosionToEdge(ff,gg,game);
+		if(ans.get(0)!=-1) {
+			if(ff.getType()==1) {
+				if(ans.get(0)>ans.get(1)) {
+					srcF=ans.get(1);
+					return srcF;
+				}
+				else {
+					srcF=ans.get(0);
+					return srcF;
+				}
+			}
+			//it the fruit type is -1
+			else {
+				if(ans.get(0)>ans.get(1)) {
+					srcF=ans.get(0);
+					return srcF;
+				}
+				else {
+					srcF=ans.get(1);
+					return srcF;
+				}
+			}
+		}
+		return srcF;
+	}
+	
 	/*******************************************************************************************************
 	 * this method return the shortest path distance from the robot to the dest node of the fruit
 	 * @param srcV
