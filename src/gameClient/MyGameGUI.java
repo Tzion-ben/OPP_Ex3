@@ -589,7 +589,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		HashMap<Integer, Integer> ans=this.newDB.bestRES(this.MYID);
 		for(int i=0;i<ans.size();i++) {
 			try {
-				Thread.sleep(10000);} catch (InterruptedException e) {e.printStackTrace();}
+				Thread.sleep(4000);} catch (InterruptedException e) {e.printStackTrace();}
 			if(ans.containsKey(i))
 				JOptionPane.showMessageDialog( this, "My best score at stage "+i+"is "
 						+ans.get(i));
