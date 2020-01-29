@@ -281,10 +281,21 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 		List<String> fruitt=this.game.getFruits();
 		Iterator<String> fruitt_iter=fruitt.iterator();
-		fruit ff=new fruit(fruitt_iter.next());
-		int destF=this.logicHelp.fruitDEST(ff, gg, game);
+		int sizeOFfruits=fruitt.size();
+
+		//		fruit ff1=new fruit(fruitt_iter.next());
+		//		fruit ff2=new fruit(fruitt_iter.next());
+		//		int destF=this.logicHelp.fruitDEST(ff2, gg, game);
 		//get the first fruit at the fruit list
 		int numNODES=gg.getV().size();
+		//chose the random fruit tnd puts the robot near it
+		int randFRUIT=(int)(Math.random()*sizeOFfruits);
+		int randNODE=(int)(Math.random()*numNODES);
+
+		System.out.println(randFRUIT);
+		fruit ff=new fruit(fruitt.get(randFRUIT));
+		int destF=this.logicHelp.fruitDEST(ff, gg, game);
+		//int destF=randNODE;
 
 		//if number of the robots is less then the number of the edges:
 		for(int i=0;i<numRob;i++) {
@@ -309,6 +320,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					this.game.addRobot(destF);
 				}
 			}
+			//this.game.addRobot(3);
 		}
 
 		drawRobbots();
@@ -377,12 +389,14 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						try {
-							long sleep=(long)((long)55/rtemp.getSpeed());
-							//System.out.println("sleep"+sleep);
-							//if(this.game.timeToEnd()/1000>20)
-							Thread.sleep(sleep);
-							//							else
-							//								Thread.sleep(10);
+							long sleep=(long)((long)168/rtemp.getSpeed());
+							String Game=this.game.toString();
+							gameServerString theGAMEstring=new gameServerString(Game);
+							System.out.println("sleep"+sleep);
+							if(theGAMEstring.getNumMoves()!=580)
+								Thread.sleep(sleep);
+							else
+								Thread.sleep(5000);
 							setPalceMarks(PlaceMarks);
 						} catch (InterruptedException e) {e.printStackTrace();}
 					}
@@ -390,7 +404,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				}
 			}
 			this.game.move();
-		}//end of the while loop
+		}//end of the loop
 
 		//**********iterator to print the score of all the robots after the game
 		List<String> robotosAfter=this.game.getRobots();
@@ -417,7 +431,6 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		try {
 			specificKMLfile = KMLString(fileName);
 			game.sendKML(specificKMLfile); 
-			System.out.println(specificKMLfile);
 		} catch (FileNotFoundException e) {e.printStackTrace();}		
 	}
 
