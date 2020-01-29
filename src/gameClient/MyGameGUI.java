@@ -18,6 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.JFrame;
@@ -157,7 +158,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gameServerString thisGamee=new gameServerString(thisGame);
 		StdDraw.text(35.20123001129944, 32.10780000092025,  "Number of moves is  "+thisGamee.getNumMoves());
 	}
-	
+
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -249,7 +250,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			}//end of the while loop
 
 			JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
-			
+
 			//**********iterator to print the score of all the robots after the game
 			List<String> robotosAfter=this.game.getRobots();
 			Iterator<String> r_after=robotosAfter.iterator();
@@ -359,7 +360,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 					int destFruit=this.logicHelp.fruitDEST(ffTemp, gg, game);			
 					//the dest of the fruit depend on it's type
-					
+
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot,destFruit, gg);
 					//****the shortedtdist from the robot to fruit
 					if(tempPathDist!=-1) {
@@ -420,6 +421,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
+		showDB();
+		myBestScores();
 		String res = game.toString();
 		System.out.println(res);
 
@@ -429,8 +432,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			specificKMLfile = KMLString(fileName);
 			game.sendKML(specificKMLfile); 
 		} catch (FileNotFoundException e) {e.printStackTrace();}	
-		
-		showDB();
+
+
 	}
 
 	/******************************************************************************************************
@@ -567,14 +570,31 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		return ans;
 		//if the file is not found it returns a empty string 
 	}
-	
+
 	/***************************************************************************************************
-	 ***************this method is about shoe to the scream all the data from the DB********************
+	 this method is about show to the scream all the data from the DB by use the class 'MyDB'
 	 ***************************************************************************************************/
 	public void showDB() {
 		ArrayList<Integer> fromMethodDB=this.newDB.printMYLog(this.MYID);
-		JOptionPane.showMessageDialog( this, "I playd "+fromMethodDB.get(0)+" games al all");
+		JOptionPane.showMessageDialog( this, "I playd "+fromMethodDB.get(0)+" games at all");
 		JOptionPane.showMessageDialog( this, "My current stage is "+fromMethodDB.get(1));
+
+	}
+
+	/****************************************************************************************************
+	 this method is about show to the scream all the best results at all the levels that i reched 
+	 use the class 'MyDB'
+	 ****************************************************************************************************/
+	public void myBestScores() {
+		HashMap<Integer, Integer> ans=this.newDB.bestRES(this.MYID);
+		for(int i=0;i<ans.size();i++) {
+			try {
+				Thread.sleep(10000);} catch (InterruptedException e) {e.printStackTrace();}
+			if(ans.containsKey(i))
+				JOptionPane.showMessageDialog( this, "My best score at stage "+i+"is "
+						+ans.get(i));
+		}
+
 
 	}
 	/*************************************************************************************************

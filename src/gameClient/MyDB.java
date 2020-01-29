@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MyDB {
 
@@ -23,7 +24,9 @@ public class MyDB {
 	 * simply prints all the games as played by the user (in the database).
 	 ************************************************************************************************/
 	public ArrayList<Integer> printMYLog(int id) {
+		//******arry List for the this level and for the number of games
 		ArrayList<Integer> MyResultd=new ArrayList<Integer>();
+
 		int disLevel=-1;
 		int countGames=0;		
 		try {
@@ -41,14 +44,6 @@ public class MyDB {
 			{
 				countGames++;
 				disLevel=resultSet.getInt("levelID");
-
-				//*******it will take the level wevery time and at the end of the lopp it will take the 
-				//currect last level
-
-				//				System.out.println(ind+") Id: " + resultSet.getInt("UserID")+", level: "+
-				//						resultSet.getInt("levelID")+", score: "+resultSet.getInt("score")+", moves:"
-				//						+ " "+resultSet.getInt("moves")+", time: "+resultSet.getDate("time"));
-				//				ind++;
 			}//end of the while loop
 
 			resultSet.close();
@@ -69,8 +64,69 @@ public class MyDB {
 		}
 		if(MyResultd.isEmpty())
 			MyResultd.add(-1);
-		
+
 		return MyResultd;
+	}
+
+	/******************************************************************************************************
+	 * this method returns the best results at all the stages that i reched 
+	 * @return
+	 *****************************************************************************************************/
+	public HashMap<Integer, Integer> bestRES (int id){
+
+		//****HashMap for the result to get the best results of the levels 
+		//****the key is the level and the value us the best score at this level
+		HashMap <Integer, Integer> bestResults=new HashMap<Integer, Integer>();
+
+		int maxTempRes=Integer.MIN_VALUE;
+		int disLevel=-1;
+		int score=0;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			//this method load the driver, belongs to class CLASS
+			Connection connection = 
+					DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcUserPassword);
+			Statement statement = connection.createStatement();
+			String allCustomersQuery = "SELECT * FROM Logs where userID="+id;
+
+			ResultSet resultSet = statement.executeQuery(allCustomersQuery);
+			while(resultSet.next())
+			{
+				disLevel=resultSet.getInt("levelID");
+				score=resultSet.getInt("score");
+				if(!bestResults.containsKey(disLevel)) {
+					bestResults.put(disLevel, score);
+				}
+				else {//if the score is exiset i put the bigger score in
+					int presentScore=bestResults.get(disLevel);
+					if(presentScore<score) 
+						bestResults.put(disLevel, score);
+				}
+
+				//*******it will take the level wevery time and at the end of the lopp it will take the 
+				//currect last level
+
+				//				System.out.println(ind+") Id: " + resultSet.getInt("UserID")+", level: "+
+				//						resultSet.getInt("levelID")+", score: "+resultSet.getInt("score")+", moves:"
+				//						+ " "+resultSet.getInt("moves")+", time: "+resultSet.getDate("time"));
+				//				ind++;
+			}//end of the while loop
+
+
+			resultSet.close();
+			statement.close();		
+			connection.close();	
+		}
+
+		catch (SQLException sqle) {
+			System.out.println("SQLException: " + sqle.getMessage());
+			System.out.println("Vendor Error: " + sqle.getErrorCode());
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return bestResults;
 	}
 
 	/************************************************************************************************
