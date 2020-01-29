@@ -378,7 +378,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				}//end of the for of fruits
 				if(this.game.timeToEnd()/1000==0) {
 					StdDraw.clear();
-					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
+					
 					this.game.stopGame();
 				}
 				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
@@ -391,10 +391,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 							String Game=this.game.toString();
 							gameServerString theGAMEstring=new gameServerString(Game);
 							//System.out.println("sleep"+sleep);
-							if(theGAMEstring.getNumMoves()!=580)
+							//if(theGAMEstring.getNumMoves()!=580)
 								Thread.sleep(sleep);
-							else
-								Thread.sleep(5000);
+//							else
+//								Thread.sleep(5000);
 							setPalceMarks(PlaceMarks);
 						} catch (InterruptedException e) {e.printStackTrace();}
 					}
@@ -403,7 +403,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			}
 			this.game.move();
 		}//end of the loop
-
+		
+		JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
 		//**********iterator to print the score of all the robots after the game
 		List<String> robotosAfter=this.game.getRobots();
 		Iterator<String> r_after=robotosAfter.iterator();
@@ -421,8 +422,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		showDB();
-		myBestScores();
+//		showDB();
+//		myBestScores();
 		String res = game.toString();
 		System.out.println(res);
 
