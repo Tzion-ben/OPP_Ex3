@@ -320,7 +320,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					this.game.addRobot(destF);
 				}
 			}
-			//this.game.addRobot(3);
+			//this.game.addRobot(26);
 		}
 
 		drawRobbots();
@@ -389,10 +389,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						try {
-							long sleep=(long)((long)168/rtemp.getSpeed());
+							long sleep=(long)((long)106/rtemp.getSpeed());
 							String Game=this.game.toString();
 							gameServerString theGAMEstring=new gameServerString(Game);
-							System.out.println("sleep"+sleep);
+							//System.out.println("sleep"+sleep);
 							if(theGAMEstring.getNumMoves()!=580)
 								Thread.sleep(sleep);
 							else
