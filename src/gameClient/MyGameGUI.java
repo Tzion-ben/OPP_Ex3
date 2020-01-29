@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,12 +22,6 @@ import java.util.Iterator;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.*;
@@ -162,6 +157,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		gameServerString thisGamee=new gameServerString(thisGame);
 		StdDraw.text(35.20123001129944, 32.10780000092025,  "Number of moves is  "+thisGamee.getNumMoves());
 	}
+	
 	/**
 	 * this method gets the graph nodes and calculating the range of the X and 
 	 * Y axis
@@ -248,18 +244,19 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				//this.game.move();
 				if(this.game.timeToEnd()/1000==0) {
 					StdDraw.clear();
-					JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
 					this.game.stopGame();
 				}
 			}//end of the while loop
 
+			JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
+			
 			//**********iterator to print the score of all the robots after the game
 			List<String> robotosAfter=this.game.getRobots();
 			Iterator<String> r_after=robotosAfter.iterator();
 			int iRun=1;
 			while(r_after.hasNext()) {
 				robbot rrr= new robbot(r_after.next());
-				Thread.sleep(250);
+				Thread.sleep(50);
 				JOptionPane.showMessageDialog(this, "The score of the robot "+iRun+" is :"+rrr.getValue());
 			}
 		}
@@ -362,7 +359,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 
 					int destFruit=this.logicHelp.fruitDEST(ffTemp, gg, game);			
 					//the dest of the fruit depend on it's type
-
+					
 					double tempPathDist=this.logicHelp.theBestWayToFruitDist(srcOFrobot,destFruit, gg);
 					//****the shortedtdist from the robot to fruit
 					if(tempPathDist!=-1) {
@@ -389,7 +386,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 					while(path_it.hasNext()) {
 						this.game.chooseNextEdge(rtemp.getId(),path_it.next().getKey());
 						try {
-							long sleep=(long)((long)106/rtemp.getSpeed());
+							long sleep=(long)((long)20/rtemp.getSpeed());
 							String Game=this.game.toString();
 							gameServerString theGAMEstring=new gameServerString(Game);
 							//System.out.println("sleep"+sleep);
@@ -431,7 +428,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		try {
 			specificKMLfile = KMLString(fileName);
 			game.sendKML(specificKMLfile); 
-		} catch (FileNotFoundException e) {e.printStackTrace();}		
+		} catch (FileNotFoundException e) {e.printStackTrace();}	
+		
+		showDB();
 	}
 
 	/******************************************************************************************************
@@ -568,6 +567,16 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 		return ans;
 		//if the file is not found it returns a empty string 
 	}
+	
+	/***************************************************************************************************
+	 ***************this method is about shoe to the scream all the data from the DB********************
+	 ***************************************************************************************************/
+	public void showDB() {
+		ArrayList<Integer> fromMethodDB=this.newDB.printMYLog(this.MYID);
+		JOptionPane.showMessageDialog( this, "I playd "+fromMethodDB.get(0)+" games al all");
+		JOptionPane.showMessageDialog( this, "My current stage is "+fromMethodDB.get(1));
+
+	}
 	/*************************************************************************************************
 	 * This private method is works only if there is some Exception, and this method allows to the user 
 	 * start the again with new GUI all the GUI will be new and let the user play again	
@@ -587,6 +596,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			idString=JOptionPane.showInputDialog(this,"Enter your ID to play");
 		}
 		Integer id =Integer.parseInt(idString);
+		this.MYID=id;
 		Game_Server.login(id);
 	}
 	@Override
@@ -633,8 +643,10 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 	private game_service game;
 	private gameLogicaly logicHelp=new gameLogicaly();
 	KML_Logger newFileKMLforGame=new KML_Logger();
+	MyDB newDB=new MyDB();
 	private int level;
 	private int autoORmanual;
+	private int MYID;
 	//auto==0 , manual==1
 	//**********************************************************************************************************
 
@@ -656,7 +668,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				drawTime();
 				StdDraw.disableDoubleBuffering();
 				StdDraw.show();
-				Thread.sleep(80);
+				Thread.sleep(100);
 			}
 		}
 		catch (InterruptedException e) {e.printStackTrace();}
