@@ -39,4 +39,5 @@ class fruitTest {
 		Point3D expected=new Point3D(thePoint);
 		assertEquals(expected, ff.getlocation());
 	}
+
 }

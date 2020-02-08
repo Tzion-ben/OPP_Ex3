@@ -3,8 +3,7 @@ package gameClient;
 import Server.Game_Server;
 
 /**
- * This class allow as to login with a ID and play automaticaly and then create a KML file
- * of the path of the robots if the bast path.
+ * This class is running the game.
  * @author tzion
  *
  */

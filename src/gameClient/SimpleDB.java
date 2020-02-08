@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 /**
- * This class represents a simple example of using MySQL Data-Base.
- * Use this example for writing solution. 
+ * This class represents a using MySQL Data-Base with all the details a .
+ * 
  * @author boaz.benmoshe
  *
  */

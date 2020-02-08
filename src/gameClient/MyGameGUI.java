@@ -378,7 +378,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				}//end of the for of fruits
 				if(this.game.timeToEnd()/1000==0) {
 					StdDraw.clear();
-					
+
 					this.game.stopGame();
 				}
 				List<node_data> THEPATH=this.logicHelp.theBestWayToFruit(srcOFrobot, theBestDestId, gg);
@@ -392,9 +392,9 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 							gameServerString theGAMEstring=new gameServerString(Game);
 							//System.out.println("sleep"+sleep);
 							//if(theGAMEstring.getNumMoves()!=580)
-								Thread.sleep(sleep);
-//							else
-//								Thread.sleep(5000);
+							Thread.sleep(sleep);
+							//							else
+							//								Thread.sleep(5000);
 							setPalceMarks(PlaceMarks);
 						} catch (InterruptedException e) {e.printStackTrace();}
 					}
@@ -403,7 +403,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			}
 			this.game.move();
 		}//end of the loop
-		
+
 		JOptionPane.showMessageDialog(this, "The time is end, GAME OVER");
 		//**********iterator to print the score of all the robots after the game
 		List<String> robotosAfter=this.game.getRobots();
@@ -422,8 +422,8 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-//		showDB();
-//		myBestScores();
+		showDB();
+		myBestScores();
 		String res = game.toString();
 		System.out.println(res);
 
@@ -689,7 +689,7 @@ public class MyGameGUI extends JFrame implements ActionListener, MouseListener, 
 				drawTime();
 				StdDraw.disableDoubleBuffering();
 				StdDraw.show();
-				Thread.sleep(100);
+				Thread.sleep(140);
 			}
 		}
 		catch (InterruptedException e) {e.printStackTrace();}

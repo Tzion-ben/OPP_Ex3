@@ -90,5 +90,4 @@ class gameLogicalyTest {
 		if(ans.get(1).getKey()!=expectedDest)
 			fail();
 	}
-
 }
